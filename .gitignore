@@ -1,0 +1,48 @@
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Django
+staticfiles/
+media/
+
+# Databases
+*.sqlite3
+*.sqlite3-journal
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+# Local environment and temporary files
+.env.local
+.env.production
+*.bak
+*.tmp
+
+# Database backups
+*.sqlite3.backup
+# Internal database maintenance scripts
+/add_projects.py
+/clear_projects.py
+/remove_duplicates.py

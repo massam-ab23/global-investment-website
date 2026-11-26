@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h1>Login</h1>
+        <p class="text-muted">
+            Please log in with your credentials to apply for investment opportunities. 
+            If you don’t have an account, you can create one below.
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                
+                <!-- Email or Username Field -->
+                <div class="mb-3">
+                    {% if user.is_superuser %}
+                        <label for="username" class="form-label">Username or Email</label>
+                    {% else %}
+                        <label for="username" class="form-label">Email address</label>
+                    {% endif %}
+                    <input type="text" name="username" id="username" class="form-control" placeholder="email address" required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password" required>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="mb-3 text-end">
+                    <a href="{% url 'password_reset' %}" class="text-primary">Forgot your password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+
+            <!-- Create New Account Button -->
+            <div class="mt-4 text-center">
+                <p>Don't have an account?</p>
+                <a href="{% url 'register' %}" class="btn btn-secondary">Create new account</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

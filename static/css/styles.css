@@ -1,0 +1,779 @@
+/*  Top Navbar (Like "EDB Singapore") */
+.top-navbar {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero {
+    background: url('../images/red-sea-coastline.jpg') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.section-background {
+    background-image: url('../images/eritrea-emblem.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 150px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: lighten;
+}
+
+/*  Adjust Logo Image Size */
+.navbar-brand img {
+    height: 50px; /* Change this to increase or decrease */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/*  Adjust Logo Text Size */
+/*  Adjust Logo Text Formatting */
+.navbar-brand span {
+    font-size: 22px; /* Adjust text size */
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1.2; /* Adjust spacing between lines */
+    text-align: left; /* Aligns text to the left of the logo */
+}
+
+/*  Indent "PLATFORM" */
+.navbar-brand span br + span {
+    display: block;
+    text-indent: 30px; /* Moves "PLATFORM" to the right */
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .btn-primary {
+    background-color: #0070ba;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+footer .btn-primary:hover {
+    background-color: #005f8d;
+}
+
+/* Contact Us Button */
+footer .contact-us-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+footer .contact-us-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.top-navbar .d-flex {
+    justify-content: flex-end; /* Keeps it right-aligned */
+    padding-right: 50px; /* Adjust this value to move left */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-link {
+    color: white !important;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Ensure all social media icons are white */
+.social-link i {
+    color: white !important; /* Make all icons white */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Specifically target the Twitter (X) icon */
+.social-link i.fa-twitter,
+.social-link i.fa-x-twitter {
+    color: white !important; /* Ensure Twitter/X is white */
+}
+
+/*  Adjust Separator Line */
+/*.separator-line {
+    border: 0;
+    height: 0.5px; /* Make it thinner */
+    
+    /*  Gradient: White to Light Blue to Blue */
+    /*background: linear-gradient(to right, 
+       /* rgba(255, 255, 255, 0.7),  /* White */
+       /* rgba(173, 216, 230, 0.9),  /* Light Blue */
+       /* rgba(0, 123, 255, 0.9)     /* Blue */
+    /*); 
+    
+    margin: 0;
+}
+/*  Adjust Separator Line - Fully Blue */
+.separator-line {
+    border: 0;
+    height: 0.5px;
+    background-color: transparent; /* Makes it fully invisible */
+    margin: 0;
+}
+
+
+
+/*  Main Navigation */
+.navbar {
+    background: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*  Menu Button */
+.menu-button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-button i {
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+/*  Menu Dropdown */
+.menu-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    width: 220px;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-dropdown.active {
+    display: block;
+}
+
+.menu-dropdown a, .menu-dropdown button {
+    display: block;
+    color: white !important;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-dropdown a:hover, .menu-dropdown button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*  Multisector Dropdown */
+/*  Fix Multisector Dropdown Alignment */
+.navbar .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important; /*  Places the dropdown just below "Multisector" */
+    left: 0; /*  Ensures it starts right under "Multisector" */
+    width: 800px !important; /*  Wide enough to fit all sectors */
+    z-index: 1050 !important;
+    display: none; /*  Initially hidden */
+}
+
+/*  Fix dropdown to always open below */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*  Ensure Multisector dropdown aligns properly */
+#multisectorDropdown + .dropdown-menu {
+    left: -250px !important; /*  Adjusts positioning */
+    min-width: 850px !important; /*  Ensures all sectors fit */
+    max-width: 900px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/*  Make the arrow smaller, thinner, and modern-looking: (Multisector & Language Dropdown Icons Misaligned) */
+.custom-dropdown-toggle .custom-arrow {
+    font-size: 12px; /* Adjust size or Ensure the icon is the right size */
+    margin-left: 0px; /* Spacing or Give space between text and icon*/
+    /*transition: transform 0.2s ease-in-out; */
+    /*transform: translateY(2px); /*  Move it slightly down */
+    /*font-weight: bold; /* Make it more visible */
+    letter-spacing: 0px; /* Spread the "v" wider */
+}
+/*  Rotate arrow when dropdown is open */
+.nav-item.dropdown:hover .custom-arrow {
+    transform: rotate(180deg);
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*  Aligns top-right items correctly */
+.top-right-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/*  Ensures Menu button is aligned */
+.menu-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.menu-button i {
+    margin-left: 5px;
+}
+
+/*  Ensures Contact Us, Search, and Menu remain in a single row */
+@media (max-width: 992px) {
+    .top-right-menu {
+        justify-content: flex-start;
+    }
+}
+
+/*  Ensure Language Dropdown Arrow Matches Multisector */
+#languageDropdown .custom-arrow {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/*  Fix Language Dropdown Alignment */
+#languageDropdown + .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important; /*  Places it directly below "English" */
+    left: 0 !important; /*  Aligns directly under "English" */
+    min-width: 180px !important; /*  Adjust width if needed */
+    max-width: 200px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /*  Adds a subtle shadow */
+}
+
+/*  Ensure the list items fit properly */
+#languageDropdown + .dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px; /*  Ensures compact text */
+    color: #333;
+    text-decoration: none;
+}
+
+/*  Hover Effect */
+#languageDropdown + .dropdown-menu a:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+
+
+/*  Remove default Bootstrap arrow from "Menu" dropdown */
+#menuDropdown::after {
+    display: none !important;
+}
+
+#menuDropdown::after {
+    display: none !important;
+}
+
+
+/*  Search Overlay Background */
+#searchOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px; /*  Wider panel */
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 30px 20px; /*  More padding for a clean look */
+    border-radius: 0 0 0 10px;
+}
+
+#searchOverlay.active {
+    display: block;
+    transform: translateX(0);
+}
+
+/*  Fix close button position */
+#closeSearch {
+    background: none;
+    border: none;
+    font-size: 22px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/*  Search Input Field */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: space-between; /*  Proper spacing */
+    background-color: #f8f8f8; /*  Light background for better visibility */
+}
+
+.search-box input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    background: transparent;
+}
+
+.search-box i {
+    font-size: 18px;
+    color: gray;
+    padding-right: 12px; /*  Add spacing between icon and input */
+}
+
+/*  Fix Search Title Size */
+#searchOverlay h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left; /*  Align to the left */
+    margin-bottom: 15px;
+}
+
+/*  Fix Quick Links */
+.quick-links {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.quick-links h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 8px 0;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+#searchButton {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: normal; /*  Make it normal */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#searchButton i {
+    font-size: 16px;
+    color: white; /*  Keeps the icon white */
+    font-style: normal; /*  Ensures correct icon rendering */
+}
+
+
+/*  Ensure NewInfo Dropdown Aligns Directly Below */
+#newInfoDropdown {
+    position: absolute !important;
+    top: 100%; /*  Places it directly below NewInfo */
+    left: 0 !important; /*  Aligns directly under NewInfo */
+    width: 220px !important; /*  Fix width */
+    padding: 5px 10px; /*  Proper padding */
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /*  Initially hidden */
+    overflow: hidden;
+}
+
+/*  Ensure Compact Dropdown */
+#newInfoDropdown.show {
+    display: block !important;
+    min-width: 200px !important;
+    max-width: 220px !important;
+    white-space: nowrap;
+}
+
+/*  Make sure it's perfectly aligned */
+#newInfoButton {
+    position: relative;
+}
+
+#newInfoButton + #newInfoDropdown {
+    left: 0 !important; /*  Ensures it is straight under */
+    right: auto !important;
+}
+
+/*  Optional: Make the dropdown a little tighter */
+#newInfoDropdown a {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+
+/*  Fix Menu Dropdown Width and Alignment */
+#menuDropdown {
+    position: relative;
+}
+
+#menuDropdown + .dropdown-menu {
+    position: absolute !important;
+    top: 100%; /* Places it directly below the Menu button */
+    left: 0; /* Aligns directly under Menu */
+    min-width: 180px !important; /* Fix width */
+    max-width: 220px !important; /* Ensures width consistency */
+    padding: 5px 10px; /* Proper padding */
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    display: none; /* Initially hidden */
+    overflow: hidden; /* Prevents unnecessary stretching */
+}
+
+/*  Ensure Compact Dropdown */
+#menuDropdown + .dropdown-menu.show {
+    display: block !important;
+    max-width: 220px !important; /* Limits width */
+    min-width: 180px !important;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/*  Adjust Logout Button */
+#menuDropdown + .dropdown-menu form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Center the Logout Button */
+#menuDropdown + .dropdown-menu form button {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+/*  Make Menu Clickable */
+#menuDropdown {
+    cursor: pointer;
+}
+
+/*  Hide the default Bootstrap dropdown arrow */
+#menuDropdown::after {
+    display: none !important;
+}
+
+
+/*  Fullscreen Slide-In Menu */
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px; /* Adjust width if needed */
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 30px 20px;
+    border-radius: 0 0 0 10px;
+}
+
+#menuOverlay.active {
+    transform: translateX(0);
+}
+
+/*  Dark Background when menu is open */
+#menuBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9998;
+}
+
+#menuBackground.active {
+    display: block;
+}
+
+/*  Close Button */
+#closeMenu {
+    background: none;
+    border: none;
+    font-size: 22px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/*  Menu Content Styling */
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-content ul li {
+    margin: 10px 0;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-content a:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+
+/*History Styling */
+/* Ensure text and image stay side by side */
+.history-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; /* Space between text and image */
+    flex-direction: row; /* Ensures text is on the left, image on the right */
+    margin-bottom: 50px; /* Adds spacing between sections */
+}
+
+/* Ensure text is aligned properly */
+.history-text {
+    flex: 1; /* Allow text to take available space */
+    text-align: left;
+}
+
+/* Ensure images are aligned properly */
+.history-img-container {
+    flex: 0 0 370px; /* Fixed width for images */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Normal (Desktop) Image Styling */
+.history-img {
+    max-width: 370px !important; /* Force smaller size */
+    width: 100% !important;
+    height: auto !important; /* Maintain aspect ratio */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .history-img {
+        max-width: 150px !important; /* Make images even smaller on mobile */
+    }
+}
+
+
+/*  FORCE Video Background to Be Even Taller */
+/*  Video Container (Reduced Height from 500px to 450px) */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 450px !important;
+    max-height: 450px !important;
+    overflow: hidden;
+
+    z-index: 1;
+
+    /* Fallback while video loads */
+    background: #111 url('../images/red-sea-coastline.jpg') center center / cover no-repeat;
+}
+
+/*  Background Video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 450px !important;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.video-title,
+.video-overlay {
+    z-index: 2;
+}
+
+/*  Title (Fixed at Center) */
+.video-title {
+    position: absolute;
+    top: 45%; /* Centers it correctly */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+/*  Overlay for Search and Subtitle */
+.video-overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 80%;
+}
+
+/*  Move Search Form Lower */
+.search-form {
+    margin-top: 30px;
+}
+
+/*  Move the Subtitle Down (Perfectly Spaced) */
+.video-overlay .subtext {
+    margin-top: 73px; /* 🔹 More space from the search button */
+    font-size: 1.2rem; /* 🔹 Slightly bigger for better readability */
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* 🔹 Stronger shadow for visibility */
+    position: absolute;
+    bottom: -30px; /* 🔹 Moves it slightly higher */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/*  Mobile Optimization */
+@media (max-width: 768px) {
+    .video-container {
+        height: 400px !important;
+        max-height: 400px !important;
+
+        /* Fallback while video loads */
+        background: #111 url('../images/red-sea-coastline.jpg') center center / cover no-repeat;
+    }
+
+    #bg-video {
+        height: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .video-title {
+        font-size: 1.8rem;
+        top: 45%; /* Keeps it centered */
+    }
+
+    .video-overlay {
+        width: 90%;
+        bottom: 10%;
+    }
+
+    .search-form {
+        margin-top: 20px;
+    }
+
+    .video-overlay .subtext {
+        font-size: 1.1rem; /* 🔹 Slightly smaller for mobile */
+        bottom: -20px; /* 🔹 Slightly higher for better visibility */
+    }
+}
+
+

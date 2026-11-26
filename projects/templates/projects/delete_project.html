@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% load i18n %}
+<div class="container py-5">
+    <h1 class="mb-4">{% trans "Delete Project" %}</h1>
+    <p>{% trans "Are you sure you want to delete the project" %}<strong>{{ project.title }}</strong>? This action cannot be undone.</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">{% trans "Yes, Delete" %}</button>
+        <a href="{% url 'my_projects' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+    </form>
+</div>
+{% endblock %}

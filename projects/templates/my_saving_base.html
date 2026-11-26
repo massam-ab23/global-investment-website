@@ -1,0 +1,323 @@
+ 
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Eritrea Investment Platform" %}</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <meta name="description" content="Eritrea Investment Platform - Discover and invest in Eritrea’s emerging markets.">
+    <meta name="keywords" content="Eritrea, Investment, Business, Startup, Finance, Africa, Trade">
+    <meta name="author" content="Eritrea Investment Platform">
+    
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Eritrea Investment Platform">
+    <meta property="og:description" content="Find the best investment opportunities in Eritrea.">
+    <meta property="og:image" content="{% static 'images/eritrea-flag.png' %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+
+    <!-- Twitter (X) Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eritrea Investment Platform">
+    <meta name="twitter:description" content="Discover the latest investment opportunities in Eritrea.">
+    <meta name="twitter:image" content="{% static 'images/eritrea-flag.png' %}">
+
+    <!-- ✅ Link to CSS -->
+    <!-- ✅ Corrected Bootstrap Imports -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-W8fXcJ1qBfFgx7Pl2b/78I7X0Eq8Pdm/kXArYtbjBI9QDKkOUXh1+QxjaRJm5tKlWDk5LR/lYtjIvRoYk03g2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-T2Z9p13UNdSc5QdZlMNsn3Rwa5smRskn5mUCBcqXcL3nNoy/yG6z64SuHyRQXcCEuNm+EbXt0VXnE8t9K84EvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-T2Z9p13UNdSc5QdZlMNsn3Rwa5smRskn5mUCBcqXcL3nNoy/yG6z64SuHyRQXcCEuNm+EbXt0VXnE8t9K84EvA==" crossorigin="anonymous"></script>
+</body>
+
+
+<body>
+    <!-- Navbar with Authentication Links -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-scroll">
+        <div class="container-fluid">
+            <!-- Emblem and Platform Name -->
+            <a class="navbar-brand text-white d-flex align-items-center ms-4" href="{% url 'landing' %}" style="margin-left: 10px;">
+                <img src="{% static 'images/eritrea-emblem.png' %}" alt="Eritrea Emblem" height="40" class="me-2">
+                <span>{% trans "Eritrea Investment Platform" %}</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Links for Everyone -->
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'landing' %}">{% trans "Home" %}</a>
+                    </li>
+
+                    <!-- ✅ Updated Multisector Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white custom-dropdown-toggle" href="#" id="multisectorDropdown">
+                            {% trans "Multisector" %} <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu p-3" aria-labelledby="multisectorDropdown" style="width: 700px;">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Agriculture' %}">🌾 {% trans "Agriculture" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Energy' %}">⚡ {% trans "Energy" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Mining' %}">⛏️ {% trans "Mining" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Education' %}">📚 {% trans "Education" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Tourism' %}">🏝️ {% trans "Tourism" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Irrigation' %}">💧 {% trans "Irrigation" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Technology' %}">💻 {% trans "Technology" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Healthcare' %}">🏥 {% trans "Healthcare" %}</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Finance' %}">💰 {% trans "Finance" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Robotics' %}">🤖 {% trans "Robotics" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Artificial-Intelligence' %}">🧠 {% trans "AI" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Manufacturing' %}">🏭 {% trans "Manufacturing" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Retail' %}">🛍️ {% trans "Retail" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Real-Estate' %}">🏠 {% trans "Real Estate" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Transportation' %}">🚚 {% trans "Transportation" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Logistics' %}">📦 {% trans "Logistics" %}</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Media' %}">📺 {% trans "Media" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Entertainment' %}">🎭 {% trans "Entertainment" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Sports' %}">⚽ {% trans "Sports" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Aerospace' %}">✈️ {% trans "Aerospace" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Defense' %}">🛡️ {% trans "Defense" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Environment' %}">🌍 {% trans "Environment" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Water-Resources' %}">🚰 {% trans "Water Resources" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Food-Processing' %}">🍽️ {% trans "Food Processing" %}</a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Pharmaceuticals' %}">💊 {% trans "Pharmaceuticals" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Biotechnology' %}">🧪 {% trans "Biotechnology" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Telecommunications' %}">📡 {% trans "Telecommunications" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'E-Commerce' %}">🛒 {% trans "E-Commerce" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Consulting' %}">📊 {% trans "Consulting" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Fashion' %}">👗 {% trans "Fashion" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Automotive' %}">🚗 {% trans "Automotive" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Non-Profit' %}">🏛️ {% trans "Non-Profit" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Public-Administration' %}">🏛 {% trans "Public Admin" %}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'about' %}">
+                            <img src="{% static 'images/eritrea-flag.png' %}" alt="Eritrea Flag" height="20" class="me-2">
+                            {% trans "About Eritrea" %}
+                        </a>
+                    </li>
+
+                    {% if user.is_authenticated %}
+                    <!-- Authenticated Users -->
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'create_project' %}">{% trans "Create new Project" %}</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'my_projects' %}">{% trans "My Projects" %}</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'notifications' %}">
+                            {% trans "Notifications" %}
+                            {% if unread_notifications_count > 0 %}
+                                <span class="badge bg-danger">{{ unread_notifications_count }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+
+                    <!-- ✅ Move the Language Dropdown here -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white custom-dropdown-toggle" href="#" id="languageDropdown">
+                            {% trans "English" %} <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                        </a>                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">                    
+                            {% for lang_code, lang_name in available_languages %}
+                                <li>
+                                    <form method="post" action="{% url 'landing' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="{{ lang_code }}">
+                                        <button type="submit" class="dropdown-item">{{ lang_name }}</button>
+                                    </form>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'profile' %}">{% trans "Profile" %}</a>
+                    </li>
+
+                    <!-- ✅ Add spacing between Profile and Logout -->
+                    <li class="nav-item">
+                        <form method="POST" action="{% url 'logout' %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link btn text-white p-0" style="background: none; border: none; margin-left: 15px;">
+                                {% trans "Logout" %}
+                            </button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <!-- Guest Users (Not Logged In) -->
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'apply_to_invest' 0 %}">{% trans "Apply to Invest" %}</a>
+                    </li>
+
+                    <!-- ✅ Updated Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white custom-dropdown-toggle" href="#" id="languageDropdown">
+                            {% trans "English" %} <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                        </a>                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">                    
+                            {% for lang_code, lang_name in available_languages %}
+                                <li>
+                                    <form method="post" action="{% url 'landing' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="{{ lang_code }}">
+                                        <button type="submit" class="dropdown-item">{{ lang_name }}</button>
+                                    </form>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'register' %}">{% trans "Register" %}</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="{% url 'login' %}">{% trans "Login" %}</a>
+                    </li>
+                    {% endif %}            
+                </ul>
+            </div>
+        </div>
+    </nav>     
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Placeholder for specific page content -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 {% trans "Eritrea Investment Platform" %}. {% trans "All rights reserved." %}</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <!-- Contact Info -->
+            <div>
+                <a href="{% url 'contact_us' %}" class="btn-contact">{% trans "Contact Us" %}</a>
+            </div>                        
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/https://www.facebook.com/Mollie.asli/" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/https://www.instagram.com/mollie_eri_91/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/My_REAL_TWITTER" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i> <!-- Try this if fa-x-twitter doesn't work -->
+                </a>                                                               
+                <a href="https://www.youtube.com/channel/MyChannelID" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/MyProfileName" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.paypal.com/donate/https://www.paypal.com/donate/?hosted_button_id=7XVJVU9RMF5GA" target="_blank" class="social-link">
+                    <i class="fab fa-paypal"></i>
+                </a>
+            </div>           
+            <!-- PayPal Button -->
+            <div class="mt-3">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=7XVJVU9RMF5GA" target="_blank" class="btn btn-primary">
+                    {% trans "Your support makes a difference. Donate securely with PayPal" %}
+                </a>
+            </div>
+        </div>
+    </footer>    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("✅ Scripts loaded!");
+    
+            // ✅ Initialize Bootstrap dropdowns (Language & Other dropdowns)
+            var dropdownElements = document.querySelectorAll('.dropdown-toggle');
+            dropdownElements.forEach(function(dropdown) {
+                console.log("✅ Initializing dropdown:", dropdown);
+                new bootstrap.Dropdown(dropdown);
+            });
+    
+            // ✅ Debugging - Check if language dropdown exists
+            var langDropdown = document.getElementById('languageDropdown');
+            if (langDropdown) {
+                console.log("✅ Language dropdown found in DOM.");
+            } else {
+                console.log("❌ Language dropdown NOT found! Check your HTML.");
+            }
+    
+            // ✅ Initialize notifications dropdown
+            const notificationsDropdown = document.getElementById('notificationsDropdown');
+            const notificationsForm = document.getElementById('notifications-form');
+    
+            if (notificationsDropdown) {
+                notificationsDropdown.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    fetch(notificationsForm.action, {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': notificationsForm.querySelector('[name="csrfmiddlewaretoken"]').value,
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const badge = notificationsDropdown.querySelector('.badge');
+                            if (badge) badge.remove();
+                        } else {
+                            console.error('Error marking notifications as read:', data.error);
+                        }
+                    })
+                    .catch(error => console.error('Unexpected error:', error));
+                });
+            }
+    
+            // ✅ "Contact Us" button functionality
+            const contactUsButton = document.querySelector('.contact-us-btn');
+            if (contactUsButton) {
+                contactUsButton.addEventListener('click', function () {
+                    window.location.href = contactUsButton.getAttribute('data-href');
+                });
+            }
+        });
+    </script>    
+</body>
+    

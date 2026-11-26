@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!-- HTML -->
+<style>
+    .section-background {
+        background: url("{% static 'images/red-sea-coastline.jpg' %}") no-repeat center center;
+        background-size: cover;
+    }
+</style>
+<section class="hero text-center py-5 section-background">
+    <div class="container">
+        <h1 class="display-4 text-white">{% trans "Eritrea: A World of Untapped Investment Opportunities" %}</h1>
+        <p class="lead text-white">{% trans "Explore diverse sectors, abundant resources, and endless possibilities for growth." %}</p>
+        <a href="#" class="btn btn-primary btn-lg">{% trans "Explore Projects" %}</a>
+    </div>
+</section>
+
+<!-- Search and Filter Form -->
+<div class="container py-5">
+    <form method="GET" action="{% url 'landing' %}" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="search" class="form-control" placeholder="{% trans 'Search by Title' %}" value="{{ request.GET.search }}">
+            </div>
+            <div class="col-md-4">
+                <select name="sector" class="form-select">
+                    <option value="">{% trans "All Sectors" %}</option>
+                    {% for sector, display in SECTOR_CHOICES %}
+                        <option value="{{ sector }}" {% if request.GET.sector == sector %}selected{% endif %}>
+                            {{ display }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="country" class="form-control" placeholder="{% trans 'Search by Country' %}" value="{{ request.GET.country }}">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">{% trans "Search" %}</button>
+    </form>
+</div>
+
+<<!-- Featured Projects Section -->
+<div class="row">
+    {% for project in featured_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Remaining Projects Section -->
+<div class="row" id="more-sectors">
+    {% for project in remaining_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Featured Projects Section -->
+<!-- landing.html -->
+<div class="row">
+    {% for project in featured_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <!-- Learn More button navigates to project details -->
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Pagination Controls -->
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'landing' %}?page={{ page_obj.previous_page_number }}&lang={{ request.LANGUAGE_CODE }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">
+                    {% trans "Previous" %}
+                </a>
+            </li>
+        {% endif %}
+        <li class="page-item disabled" aria-disabled="true">
+            <span class="page-link">{% trans "Page" %} {{ page_obj.number }} {% trans "of" %} {{ page_obj.paginator.num_pages }}</span>
+        </li>
+        {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'landing' %}?page={{ page_obj.next_page_number }}&lang={{ request.LANGUAGE_CODE }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">
+                    {% trans "Next" %}
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+
+<!-- Go Back to Home -->
+<div class="text-center mt-5">
+    <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Go Back to Home" %}</a>
+</div>
+
+<!-- Why Invest in Eritrea -->
+<section class="why-invest py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">{% trans "Why Invest in Eritrea?" %}</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{% trans "Strategic Red Sea location for trade and logistics." %}</li>
+            <li class="list-group-item">{% trans "Abundant natural resources and investment-friendly policies." %}</li>
+            <li class="list-group-item">{% trans "Opportunities across diverse sectors." %}</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Image Fallback Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll("img").forEach(img => {
+            img.addEventListener("error", function() {
+                this.src = "{% static 'images/placeholder.jpg' %}";
+            });
+        });
+    });
+</script>
+{% endblock %}

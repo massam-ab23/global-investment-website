@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load i18n %}  <!-- Ensure this line is present -->
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{% trans "Contact Us" %}</h2>
+
+    <!-- Display messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Render the form with reCAPTCHA -->
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Option 1: If using Django Forms -->
+        {% if form %}
+            {{ form.as_p }}
+        {% else %}
+            <!-- Option 2: If using manually defined fields -->
+            <div class="mb-3">
+                <label for="name" class="form-label">{% trans "Your Name" %}</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">{% trans "Last Name" %}</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">{% trans "Your Email" %}</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">{% trans "Your Message" %}</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+        {% endif %}
+
+        <button type="submit" class="btn btn-primary">{% trans "Send Message" %}</button>
+    </form>
+</div>
+{% endblock %}

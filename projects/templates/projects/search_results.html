@@ -1,0 +1,20 @@
+
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>{% trans "Search Results" %}</h1>
+    
+    {% if results %}
+        <ul class="list-group mt-3">
+            {% for project in results %}
+                <li class="list-group-item">
+                    <a href="{% url 'project_detail' project.id %}">{{ project.title }}</a> - {{ project.description }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans "No results found." %}</p>
+    {% endif %}
+</div>
+{% endblock %}

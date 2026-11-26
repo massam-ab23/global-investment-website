@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}  <!-- ✅ Load translation library -->
+
+{% block content %}
+<div class="sector-header" style="background: url('{{ sector_image_url }}') no-repeat center center/cover; 
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;  
+    padding-left: 200px;  
+    color: white; 
+    font-size: 40px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);">
+    {% trans sector_name %}
+</div>
+
+<div class="container py-5">
+    <h2>{% trans "Investment Opportunity in" %} {% trans sector_name %}</h2>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- ✅ Corrected Image Path -->
+            <img src="{{ sector_image_url }}" class="img-fluid rounded shadow" alt="{% trans sector_name %}">
+        </div>
+        <div class="col-md-8">
+            <p><strong>{% trans "Description:" %}</strong> {% trans sector_description %}</p>
+            <p><strong>{% trans "Sector:" %}</strong> {% trans sector_name %}</p>
+            <p><strong>{% trans "Country:" %}</strong> {% trans "Eritrea" %}</p>
+            <p><strong>{% trans "Investment Required:" %}</strong> ${{ investment_required }}</p>
+            <p><strong>{% trans "Status:" %}</strong> {{ status }}</p>
+            <p><strong>{% trans "Created On:" %}</strong> {{ created_at }}</p>
+            <p><strong>{% trans "Last Updated:" %}</strong> {{ updated_at }}</p>
+
+            <a href="{% if project %}{% url 'apply_to_invest' project.id %}{% else %}{% url 'apply_to_invest' 0 %}{% endif %}" class="btn btn-primary">
+                {% trans "Apply to Invest" %}
+            </a>                                           
+        </div>
+    </div>
+</div>
+{% endblock %}

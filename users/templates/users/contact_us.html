@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<div class="container mt-5">
+    <h2>Contact Us</h2>
+
+    <!-- Display messages -->
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">{% trans "Your Name" %}</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">{% trans "Your Email" %}</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">{% trans "Your Message" %}</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">{% trans "Send Message" %}</button>
+    </form>
+</div>
+{% endblock %}

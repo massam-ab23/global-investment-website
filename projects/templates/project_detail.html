@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load static %}
+
+<div class="container py-5">
+        <div class="row">
+        
+            <!-- Display Image Dynamically -->
+            <div>
+                <img src="{% static 'images/' %}{{ project.sector|lower }}.jpg" alt="Sector Image">
+            </div>
+        </div>
+        
+
+        <!-- Project Details Section -->
+        <div class="col-md-6">
+            <h1>{{ project.title }}</h1>
+            <p><strong>Sector:</strong> {{ project.sector }}</p>
+            <p><strong>Country:</strong> {{ project.country }}</p>
+            <p><strong>Status:</strong> {{ project.get_status_display }}</p>
+            <p><strong>Investment Required:</strong> ${{ project.investment_required|floatformat:2 }}</p>
+            <p><strong>Description:</strong></p>
+            <p>{{ project.description }}</p>
+        </div>
+    </div>
+
+    <!-- Collaborators Section -->
+    <div class="mt-4">
+        <h5>{% trans "Collaborators:" %}</h5>
+        {% if project.collaborators.exists %}
+            <ul>
+                {% for collaborator in project.collaborators.all %}
+                    <li>{{ collaborator.username }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>{% trans "No collaborators yet." %}</p>
+        {% endif %}
+    </div>
+
+    <!-- Go Back to Home Button -->
+    <div class="mt-4">
+        <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Go Back to Home" %}</a>
+    </div>
+</div>

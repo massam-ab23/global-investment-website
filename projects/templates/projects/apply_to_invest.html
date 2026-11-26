@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load i18n %}
+<div class="container py-5">
+
+    {% for template in TEMPLATE_DIRS %}
+      <p>{{ template }}</p>
+    {% endfor %}
+
+    <!-- ✅ MESSAGE DISPLAY BLOCK -->
+    {% if messages %}
+      <div class="container">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <!-- ✅ END MESSAGE DISPLAY -->
+
+    <h1 class="text-center mb-4">{% trans "Apply to Invest" %}</h1>
+    <p class="text-center">{% trans "Please fill out the form below to express your interest in investing in a sector. Our team will review your application and get back to you." %}</p>
+    
+    <!-- ✅ FORM ERRORS DISPLAY -->
+    {% if form.errors %}
+        <ul class="alert alert-danger">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <li><strong>{{ field|capfirst }}</strong>: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <!-- ✅ END FORM ERRORS DISPLAY -->
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_title" class="form-label">{% trans "Title:" %}</label>
+            {{ form.title }}
+        </div>
+        <div class="mb-3">
+            <label for="id_sector" class="form-label">{% trans "Sector:" %}</label>
+            {{ form.sector }}
+        </div>
+        <div class="mb-3">
+            <label for="id_country" class="form-label">{% trans "Country:" %}</label>
+            {{ form.country }}
+        </div>
+        <div class="mb-3">
+            <label for="id_investment_required" class="form-label">{% trans "Investment Required:" %}</label>
+            {{ form.investment_required }}
+        </div>
+        <div class="mb-3">
+            <label for="id_contact_information" class="form-label">{% trans "Contact Information:" %}</label>
+            {{ form.contact_information }}
+        </div>
+        <div class="mb-3">
+            <label for="id_message" class="form-label">{% trans "Why are you interested in this project?" %}</label>
+            {{ form.message }}
+        </div>
+        <!-- ✅ ADD THE reCAPTCHA WIDGET -->
+        <div class="mb-3">
+            {{ form.captcha }}
+        </div>
+        <!-- ✅ END reCAPTCHA -->
+
+        <button type="submit" class="btn btn-primary">{% trans "Submit Application" %}</button>
+        <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+    </form>
+</div>
+{% endblock %}

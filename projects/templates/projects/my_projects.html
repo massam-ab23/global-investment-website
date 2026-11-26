@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+{% load i18n %}
+<div class="container py-5">
+    <h1 class="text-center mb-4">{% trans "My Projects Dashboard" %}</h1>
+
+    <!-- Dashboard Summary -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <h4>{% trans "Total Projects" %}</h4>
+                    <p class="display-5">{{ total_projects }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <h4>{% trans "Total Investment" %}</h4>
+                    <p class="display-5">${{ total_investment }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <h4>{% trans "Total Collaborators" %}</h4>
+                    <p class="display-5">{{ total_collaborators }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search and Filter Form -->
+    <h3 class="mb-4">{% trans "Search and Filter Projects" %}</h3>
+    <form method="GET" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="search" class="form-control" placeholder="Search by title" value="{{ search_query }}">
+            </div>
+            <div class="col-md-4">
+                <select name="sector" class="form-select">
+                    <option value="">{% trans "All Sectors" %}</option>
+                    {% for sector_value, sector_display in sectors %}
+                        <option value="{{ sector_value }}" {% if sector_filter == sector_value %}selected{% endif %}>{{ sector_display }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select name="status" class="form-select">
+                    <option value="">{% trans "All Statuses" %}</option>
+                    {% for status_value, status_display in statuses %}
+                        <option value="{{ status_value }}" {% if status_filter == status_value %}selected{% endif %}>{{ status_display }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">{% trans "Filter" %}</button>
+    </form>
+
+    <!-- Projects List -->
+    {% if page_obj %}
+        <ul class="list-group">
+            {% for project in page_obj %}
+                <li class="list-group-item">
+                    <h5>{{ project.title }}</h5>
+                    <p>{{ project.description|truncatewords:20 }}</p>
+                    <div class="project-buttons">
+                        <a href="{% url 'project_detail' project.id %}" class="btn btn-sm btn-primary me-2">{% trans "View Details" %}</a>
+                        <a href="{% url 'edit_project' project.id %}" class="btn btn-sm btn-secondary me-2">{% trans "Edit" %}</a>
+                        <a href="{% url 'delete_project' project.id %}" class="btn btn-sm btn-danger">{% trans "Delete" %}</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Pagination Controls -->
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">{% trans "Previous" %}</a>
+                    </li>
+                {% endif %}
+                <li class="page-item disabled">
+                    <span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                </li>
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">{% trans "Next" %}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% else %}
+        <p class="text-center">You have not created any projects yet</p>
+    {% endif %}
+
+    <!-- Go Back to Home -->
+    <div class="text-center mt-4">
+        <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Go Back to Home" %}</a>
+    </div>
+</div>
+{% endblock %}

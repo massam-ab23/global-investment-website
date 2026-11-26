@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">{% trans "History of Eritrea" %}</h1>
+    <p class="text-center">{% trans "Explore the rich and diverse history of Eritrea, from ancient civilizations to modern independence." %}</p>
+
+     <!-- History Sections -->
+     <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Ancient Era" %}</h2>
+            <p>Eritrea's history dates back to around 3500 B.C., with the Kunama and Nara peoples among its earliest inhabitants. The region is believed to be part of the ancient "Land of Punt," known for trade with ancient Egypt, particularly in gold, frankincense, and exotic animals.
+
+                By the 1st century B.C., Eritrea became a major center of international trade through the port city of Adulis. Located on the Red Sea, Adulis connected Africa with Rome, Greece, Persia, and India, making it a key commercial hub of the ancient world. The region was influenced by Greek and Byzantine cultures, and early Christian communities were established along the coast.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/adulis.jpg' %}" alt="Adulis Ruins" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+
+    <!-- Medieval Period (Text first, image second) -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Medieval Period" %}</h2>
+            <p>Following the decline of Adulis due to shifting trade routes and external invasions, Eritrea saw the rise of local kingdoms such as Medri Bahri in the 15th century. This kingdom controlled the Eritrean highlands and successfully resisted foreign domination.
+
+                The Dahlak Archipelago, a group of islands off the Eritrean coast, became a prosperous Islamic trading hub, exchanging goods with the Arabian Peninsula and India.
+                
+                In the 16th century, the Ottoman Empire took control of Massawa and surrounding coastal areas, integrating them into their vast trading network. However, the highlands remained largely independent.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/medri-bahri.jpg' %}" alt="Medri Bahri Kingdom" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+
+    <!-- Colonial Era -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Colonial Era" %}</h2>
+            <p>In the late 19th century, Eritrea became an Italian colony, officially established on January 1, 1890. Italian rule brought urban development and infrastructure, transforming Asmara into a modern city with distinct Art Deco architecture.
+
+                Despite development, Eritreans faced economic and social discrimination under Italian rule.
+                
+                During World War II, Italy was defeated, and British forces occupied Eritrea in 1941, administering it as a protectorate until 1952.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/italian-colonial.jpg' %}" alt="Italian Colonial Rule" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+
+   <!-- Federation and Annexation  -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Federation and Annexation" %}</h2>
+            <p>In 1952, the United Nations federated Eritrea with Ethiopia, granting limited autonomy. However, in 1962, Ethiopian Emperor Haile Selassie dissolved the federation, fully annexing Eritrea and outlawing its flag, language, and government.
+
+                This led to growing unrest and armed resistance, as many Eritreans saw Ethiopian rule as an occupation.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/federation.jpg' %}" alt="Eritrea-Ethiopia Federation" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+
+    <!-- Struggle for Independence -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Struggle for Independence" %}</h2>
+            <p>The Eritrean War of Independence began in 1961, led by groups such as the Eritrean Liberation Front (ELF) and later the Eritrean People's Liberation Front (EPLF).
+
+                For 30 years, Eritrean fighters waged a guerrilla war against Ethiopian forces, enduring airstrikes, famine, and foreign interventions.
+                
+                In 1991, Eritrean forces defeated Ethiopia’s military regime, and after a UN-supervised referendum in 1993, Eritrea gained formal independence, with 99.8% voting in favor.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/eplf.jpg' %}" alt="Eritrean Independence Fighters" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+
+    <!-- Modern Era -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-6">
+            <h2>{% trans "Modern Era" %}</h2>
+            <p>Since independence, Eritrea has focused on self-reliance, national unity, and economic development. However, challenges such as border conflicts, political restrictions, and sanctions have shaped the country’s modern landscape.
+
+                Efforts continue to preserve Eritrea’s rich cultural heritage, including the promotion of ancient sites like Adulis and Qohaito, which are considered for UNESCO World Heritage status.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/modern-eritrea.jpg' %}" alt="Modern Eritrea" class="img-fluid rounded shadow history-img">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

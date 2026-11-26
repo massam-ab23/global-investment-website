@@ -1,0 +1,764 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-06 11:52+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese <LL@li.org>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#: .\global_investment\settings.py:185
+msgid "Arabic"
+msgstr "阿拉伯语"
+
+#: .\global_investment\settings.py:186
+msgid "Chinese"
+msgstr "中文"
+
+#: .\global_investment\settings.py:187
+msgid "German"
+msgstr "德语"
+
+#: .\global_investment\settings.py:188
+msgid "French"
+msgstr "法语"
+
+#: .\global_investment\settings.py:189
+msgid "Italian"
+msgstr "意大利语"
+
+#: .\global_investment\settings.py:190
+msgid "Russian"
+msgstr "俄语"
+
+#: .\global_investment\settings.py:191
+msgid "Svenska"
+msgstr "瑞典语"
+
+#: .\global_investment\settings.py:192
+msgid "Tigrinya"
+msgstr "厄立特里亚提格里尼亚语"
+
+#: .\global_investment\settings.py:193
+msgid "English"
+msgstr "英语"
+
+#: .\projects\models.py:171 .\users\models.py:43
+msgid "Welcome to Eritrea Investment Platform"
+msgstr "欢迎来到厄立特里亚投资平台"
+
+#: .\projects\templates\projects\language_selection.html:7
+msgid "Select Language"
+msgstr "选择语言"
+
+#: .\projects\templates\projects\language_selection.html:13
+msgid "Select a Language"
+msgstr "选择一种语言"
+
+#: .\projects\views.py:472 .\users\views.py:46
+msgid "This text will be translated."
+msgstr "此文本将被翻译"
+
+#: templates/landing.html:10
+msgid "Eritrea: A World of Untapped Investment Opportunities"
+msgstr "厄立特里亚：一个尚未开发的投资机会世界"
+
+#: templates/landing.html:11
+msgid "Explore Projects"
+msgstr "探索项目"
+
+#: templates/landing.html:20
+msgid "Agriculture"
+msgstr "农业"
+
+#: templates/landing.html:21
+msgid ""
+"The agriculture sector in Eritrea offers opportunities for sustainable "
+"farming, export-oriented crops, and irrigation systems. With fertile lands "
+"and untapped potential, investments in agricultural technology and "
+"infrastructure can significantly boost productivity."
+msgstr ""
+"厄立特里亚的农业部门提供可持续农业、出口导向型作物和灌溉系统的投资机会。"
+"拥有肥沃的土地和未开发的潜力，对农业技术和基础设施的投资可以显著提高生产力。"
+
+#: templates/landing.html:30
+msgid "Energy"
+msgstr "能源"
+
+#: templates/landing.html:31
+msgid ""
+"Eritrea is committed to renewable energy development, including solar, wind, "
+"and hydroelectric projects. The nation’s geographical advantage and "
+"government support make it a prime location for clean energy investments."
+msgstr ""
+"厄立特里亚致力于可再生能源的发展，包括太阳能、风能和水力发电项目。"
+"其地理优势和政府支持使其成为清洁能源投资的理想地点。"
+
+#: templates/landing.html:40
+msgid "Mining"
+msgstr "采矿"
+
+#: templates/landing.html:41
+msgid ""
+"Eritrea is rich in natural resources, including gold, potash, and base "
+"metals. The mining sector is poised for growth, with untapped reserves and "
+"favorable policies encouraging exploration and extraction."
+msgstr ""
+"厄立特里亚拥有丰富的自然资源，包括黄金、钾盐和基础金属。"
+"采矿业正处于增长阶段，未开发的矿藏和优惠政策鼓励勘探和开采。"
+
+#: templates/landing.html:50
+msgid "Education"
+msgstr "教育"
+
+#: templates/landing.html:51
+msgid ""
+"Investments in education infrastructure such as schools, universities, and "
+"vocational training centers are vital to Eritrea's economic growth. "
+"Opportunities exist for public-private partnerships to expand access to "
+"quality education."
+msgstr ""
+"对学校、大学和职业培训中心等教育基础设施的投资对厄立特里亚的经济增长至关重要。"
+"公私合作伙伴关系可以扩大优质教育的覆盖范围。"
+
+#: templates/landing.html:60
+msgid "Tourism"
+msgstr "旅游业"
+
+#: templates/landing.html:61
+msgid ""
+"Eritrea's rich cultural heritage, historical sites, and pristine Red Sea "
+"coastline offer immense potential for tourism development. Eco-tourism, "
+"historical site restoration, and diving resorts are key growth areas."
+msgstr ""
+"厄立特里亚丰富的文化遗产、历史遗址和原始的红海海岸线为旅游业发展提供了巨大潜力。"
+"生态旅游、历史遗址修复和潜水度假村是关键增长领域。"
+
+#: templates/landing.html:70
+msgid "Irrigation"
+msgstr "灌溉"
+
+#: templates/landing.html:71
+msgid ""
+"Invest in advanced irrigation systems to enhance agricultural productivity "
+"in arid regions. Opportunities include smart irrigation technologies, drip "
+"systems, and sustainable water management solutions to support crop yields."
+msgstr ""
+"投资先进的灌溉系统，以提高干旱地区的农业生产力。"
+"投资机会包括智能灌溉技术、滴灌系统和可持续水资源管理解决方案，以支持农作物产量。"
+
+#: templates/landing.html:80
+msgid "Technology"
+msgstr "科技"
+
+#: templates/landing.html:81
+msgid ""
+"The technology sector in Eritrea is emerging, with opportunities in "
+"artificial intelligence, robotics, and software development. Investments in "
+"tech parks and startups can drive innovation."
+msgstr ""
+"厄立特里亚的科技行业正在兴起，人工智能、机器人技术和软件开发方面存在投资机会。"
+"对科技园区和初创企业的投资可以推动创新。"
+
+#: templates/landing.html:90
+msgid "Healthcare"
+msgstr "医疗保健"
+
+#: templates/landing.html:91
+msgid ""
+"Opportunities exist to build modern healthcare facilities, introduce "
+"telemedicine services, and manufacture pharmaceuticals locally. Eritrea’s "
+"growing population presents significant potential for healthcare investments."
+msgstr ""
+"投资建设现代医疗设施、引入远程医疗服务和本地化制药存在巨大机遇。"
+"厄立特里亚不断增长的人口为医疗投资提供了重要潜力。"
+
+#: templates/landing.html:100
+msgid "Finance"
+msgstr "金融"
+
+#: templates/landing.html:101
+msgid ""
+"The financial sector is expanding with opportunities in microfinance, "
+"fintech solutions, and banking modernization. Investors can play a key role "
+"in shaping Eritrea’s financial infrastructure."
+msgstr ""
+"金融行业正在扩展，微型金融、金融科技解决方案和银行现代化等领域存在投资机会。"
+"投资者可以在塑造厄立特里亚的金融基础设施方面发挥关键作用。"
+
+#: templates/landing.html:110
+msgid "Robotics"
+msgstr "机器人技术"
+
+#: templates/landing.html:111
+msgid ""
+"With global advancements in robotics, Eritrea presents opportunities for "
+"introducing automation in industries such as agriculture, manufacturing, and "
+"logistics."
+msgstr ""
+"随着全球机器人技术的发展，厄立特里亚在农业、制造业和物流业引入自动化方面存在投资机会。"
+
+#: templates/landing.html:120
+msgid "Artificial Intelligence"
+msgstr "人工智能"
+
+#: templates/landing.html:121
+msgid ""
+"The AI sector is burgeoning worldwide, and Eritrea can capitalize on this by "
+"fostering innovation in machine learning, predictive analytics, and AI-"
+"driven solutions."
+msgstr ""
+"人工智能行业正在全球范围内蓬勃发展，厄立特里亚可以利用这一趋势，"
+"推动机器学习、预测分析和人工智能驱动解决方案方面的创新。"
+
+#: templates/landing.html:130
+msgid "Manufacturing"
+msgstr "制造业"
+
+#: templates/landing.html:131
+msgid ""
+"Investments in manufacturing facilities for textiles, building materials, "
+"and consumer goods can stimulate Eritrea’s industrial growth. Export-driven "
+"manufacturing is particularly promising."
+msgstr ""
+"投资纺织品、建筑材料和消费品的制造设施，可以促进厄立特里亚的工业增长。"
+"以出口为导向的制造业尤其前景广阔。"
+
+#: templates/landing.html:140
+msgid "Retail"
+msgstr "零售业"
+
+#: templates/landing.html:141
+msgid ""
+"The retail sector is evolving, with opportunities in e-commerce, supply "
+"chain logistics, and modern retail infrastructure development."
+msgstr ""
+"零售业正在发展，电子商务、供应链物流和现代零售基础设施的建设存在投资机会。"
+
+#: templates/landing.html:150
+msgid "Real-Estate"
+msgstr "房地产"
+
+#: templates/landing.html:151
+msgid ""
+"Eritrea’s urbanization trends present opportunities for real estate "
+"development, including residential, commercial, and industrial properties."
+msgstr ""
+"厄立特里亚的城市化趋势为房地产开发提供了机遇，"
+"包括住宅、商业和工业地产。"
+
+#: templates/landing.html:160
+msgid "Transportation"
+msgstr "交通运输"
+
+#: templates/landing.html:161
+msgid ""
+"Investments in transportation infrastructure such as roads, railways, and "
+"ports can significantly enhance Eritrea’s logistics and trade capabilities."
+msgstr ""
+"对道路、铁路和港口等交通基础设施的投资可以显著提高"
+"厄立特里亚的物流和贸易能力。"
+
+#: templates/landing.html:170
+msgid "Logistics"
+msgstr "物流"
+
+#: templates/landing.html:171
+msgid ""
+"Eritrea’s strategic Red Sea location offers potential for logistics hubs, "
+"warehousing, and supply chain optimization."
+msgstr ""
+"厄立特里亚在红海的战略位置为物流枢纽、仓储和供应链优化提供了潜力。"
+
+#: templates/landing.html:180
+msgid "Media"
+msgstr "媒体"
+
+#: templates/landing.html:181
+msgid ""
+"The media sector in Eritrea is ripe for development, including digital "
+"content creation, television broadcasting, and film production."
+msgstr ""
+"厄立特里亚的媒体行业已准备好发展，包括数字内容创作、"
+"电视广播和电影制作。"
+
+#: templates/landing.html:190
+msgid "Entertainment"
+msgstr "娱乐"
+
+#: templates/landing.html:191
+msgid ""
+"Opportunities exist in developing entertainment facilities, including "
+"theaters, amusement parks, and online streaming platforms."
+msgstr ""
+"娱乐设施的开发存在机会，包括剧院、游乐园和在线流媒体平台。"
+
+#: templates/landing.html:200
+msgid "Sports"
+msgstr "体育"
+
+#: templates/landing.html:201
+msgid ""
+"Investments in sports infrastructure, including stadiums, training centers, "
+"and youth sports programs, can promote talent development and tourism."
+msgstr ""
+"投资于体育基础设施，包括体育场、培训中心和青少年体育项目，"
+"可以促进人才发展和旅游业。"
+
+#: templates/landing.html:210
+msgid "Aerospace"
+msgstr "航空航天"
+
+#: templates/landing.html:211
+msgid ""
+"The aerospace sector offers opportunities for partnerships in aviation "
+"technology, maintenance services, and airport infrastructure development."
+msgstr ""
+"航空航天行业为航空技术、维修服务和机场基础设施开发的合作"
+"提供了机会。"
+
+#: templates/landing.html:220
+msgid "Defense"
+msgstr "国防"
+
+#: templates/landing.html:221
+msgid ""
+"Opportunities exist in defense technology, cybersecurity, and manufacturing "
+"of equipment to bolster Eritrea’s national security."
+msgstr ""
+"国防技术、网络安全和设备制造方面存在投资机会，"
+"以加强厄立特里亚的国家安全。"
+
+#: templates/landing.html:230
+msgid "Environment"
+msgstr "环境"
+
+#: templates/landing.html:231
+msgid ""
+"Invest in sustainable projects focused on environmental conservation, waste "
+"management, and renewable energy integration."
+msgstr ""
+"投资于可持续项目，专注于环境保护、废物管理和可再生能源的整合。"
+
+#: templates/landing.html:240
+msgid "Water-Resources"
+msgstr "水资源"
+
+#: templates/landing.html:241
+msgid ""
+"Projects in water resource management, including desalination, irrigation, "
+"and water purification systems, are critical to Eritrea's development."
+msgstr ""
+"水资源管理项目，包括海水淡化、灌溉和水净化系统，"
+"对厄立特里亚的发展至关重要。"
+
+#: templates/landing.html:250
+msgid "Food-Processing"
+msgstr "食品加工"
+
+#: templates/landing.html:251
+msgid ""
+"Opportunities exist in value-added food processing, packaging, and export of "
+"locally produced agricultural goods."
+msgstr ""
+"增值食品加工、包装以及当地农产品出口方面存在投资机会。"
+
+#: templates/landing.html:260
+msgid "Pharmaceuticals"
+msgstr "制药"
+
+#: templates/landing.html:261
+msgid ""
+"Invest in the manufacturing and distribution of pharmaceuticals to cater to "
+"Eritrea's growing healthcare demands."
+msgstr ""
+"投资于制药生产和分销，以满足厄立特里亚日益增长的医疗需求。"
+
+#: templates/landing.html:270
+msgid "Biotechnology"
+msgstr "生物技术"
+
+#: templates/landing.html:271
+msgid ""
+"Eritrea offers potential in biotechnology innovations, particularly in "
+"agriculture, healthcare, and environmental solutions."
+msgstr ""
+"厄立特里亚在生物技术创新方面具有潜力，尤其是在农业、医疗保健和环境解决方案领域。"
+
+#: templates/landing.html:280
+msgid "Telecommunications"
+msgstr "电信"
+
+#: templates/landing.html:281
+msgid ""
+"The telecommunications sector is growing, with opportunities in expanding "
+"internet access, mobile services, and digital communication infrastructure."
+msgstr ""
+"电信行业正在增长，提供了扩展互联网接入、移动服务和数字通信基础设施的投资机会。"
+
+#: templates/landing.html:290 templates/base.html
+msgid "E-Commerce"
+msgstr "电子商务"
+
+#: templates/landing.html:291
+msgid ""
+"E-commerce is an untapped market in Eritrea, with potential for online "
+"marketplaces, payment gateways, and last-mile delivery services."
+msgstr ""
+"电子商务在厄立特里亚仍是一片未开发的市场，具有在线市场、"
+"支付网关和最后一公里配送服务的潜力。"
+
+#: templates/landing.html:300
+msgid "Consulting"
+msgstr "咨询服务"
+
+#: templates/landing.html:301
+msgid ""
+"Opportunities exist in management consulting, business advisory services, "
+"and training programs to support Eritrea’s growing industries."
+msgstr ""
+"管理咨询、商业咨询服务和培训项目方面存在投资机会，"
+"以支持厄立特里亚日益增长的产业。"
+
+#: templates/landing.html:310
+msgid "Fashion"
+msgstr "时尚"
+
+#: templates/landing.html:311
+msgid ""
+"Investments in fashion design, textile manufacturing, and retail can promote "
+"Eritrea’s cultural heritage and export potential."
+msgstr ""
+"对时尚设计、纺织制造和零售的投资可以促进厄立特里亚的文化遗产和出口潜力。"
+
+#: templates/landing.html:320
+msgid "Automotive"
+msgstr "汽车工业"
+
+#: templates/landing.html:321
+msgid ""
+"Opportunities in automotive assembly plants, electric vehicles, and spare "
+"parts manufacturing can contribute to Eritrea’s industrial growth."
+msgstr ""
+"汽车装配厂、电动汽车和零部件制造的投资机会可以促进厄立特里亚的工业增长。"
+
+#: templates/landing.html:330
+msgid "Non-Profit"
+msgstr "非营利组织"
+
+#: templates/landing.html:331
+msgid ""
+"Support non-profit initiatives focused on education, healthcare, and "
+"community development to make a meaningful impact."
+msgstr ""
+"支持专注于教育、医疗保健和社区发展的非营利计划，以产生积极影响。"
+
+#: templates/landing.html:340
+msgid "Public-Administration"
+msgstr "公共行政"
+
+#: templates/landing.html:341
+msgid ""
+"Collaborate on projects to modernize public administration, including "
+"digital governance and infrastructure planning."
+msgstr ""
+"合作开展现代化公共行政项目，包括数字治理和基础设施规划。"
+
+#: templates/base.html:10
+msgid "Eritrea Investment Platform"
+msgstr "厄立特里亚投资平台"
+
+#: templates/base.html:10
+msgid "Home"
+msgstr "主页"
+
+#: templates/base.html:12
+msgid "About Eritrea"
+msgstr "关于厄立特里亚"
+
+#: templates/base.html:13
+msgid "Create new Project"
+msgstr "创建新项目"
+
+#: templates/base.html:14
+msgid "My Projects"
+msgstr "我的项目"
+
+#: templates/base.html:15 templates/project_detail.html:17
+msgid "Apply to Invest"
+msgstr "申请投资"
+
+#: templates/base.html:16
+msgid "Notifications"
+msgstr "通知"
+
+#: templates/base.html:17
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: templates/landing.html:12
+msgid ""
+"Explore diverse sectors, abundant resources, and endless possibilities for "
+"growth."
+msgstr ""
+"探索多元化行业、丰富的资源和无限的增长机会。"
+
+#: templates/landing.html:21
+msgid "Search by Title"
+msgstr "按标题搜索"
+
+#: templates/landing.html:22
+msgid "All Sectors"
+msgstr "所有行业"
+
+#: templates/landing.html:23
+msgid "Search by Country"
+msgstr "按国家搜索"
+
+#: templates/landing.html:24
+msgid "Search"
+msgstr "搜索"
+
+#: templates/landing.html:50
+msgid "Learn More"
+msgstr "了解更多"
+
+#: templates/landing.html:60
+msgid "Strategic Red Sea location for trade and logistics."
+msgstr "红海的战略位置有利于贸易和物流。"
+
+#: templates/landing.html:61
+msgid "Abundant natural resources and investment-friendly policies."
+msgstr "丰富的自然资源和友好的投资政策。"
+
+#: templates/landing.html:62
+msgid "Opportunities across diverse sectors."
+msgstr "各个行业的投资机会。"
+
+#: templates/base.html:60
+msgid "Profile"
+msgstr "个人资料"
+
+#: templates/base.html:70
+msgid "Logout"
+msgstr "登出"
+
+#: templates/apply_to_invest.html:11
+msgid ""
+"Please fill out the form below to express your interest in investing in a "
+"sector. Our team will review your application and get back to you."
+msgstr ""
+"请填写下面的表格，表达您对某一行业投资的兴趣。"
+"我们的团队将审核您的申请并回复您。"
+
+#: templates/apply_to_invest.html:20
+msgid "Title:"
+msgstr "标题："
+
+#: templates/apply_to_invest.html:21 templates/project_detail.html:11
+msgid "Sector:"
+msgstr "行业："
+
+#: templates/apply_to_invest.html:22 templates/project_detail.html:12
+msgid "Country:"
+msgstr "国家："
+
+#: templates/apply_to_invest.html:23 templates/project_detail.html:13
+msgid "Investment Required:"
+msgstr "所需投资："
+
+#: templates/apply_to_invest.html:24
+msgid "Contact Information:"
+msgstr "联系方式："
+
+#: templates/apply_to_invest.html:25
+msgid "Why are you interested in this project?"
+msgstr "您为什么对该项目感兴趣？"
+
+#: templates/apply_to_invest.html:26
+msgid "Submit Application"
+msgstr "提交申请"
+
+#: templates/apply_to_invest.html:27
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/project_detail.html:10
+msgid "Description:"
+msgstr "描述："
+
+#: templates/project_detail.html:14
+msgid "Status:"
+msgstr "状态："
+
+#: templates/project_detail.html:15
+msgid "Created On:"
+msgstr "创建日期："
+
+#: templates/project_detail.html:16
+msgid "Last Updated:"
+msgstr "最近更新："
+
+#: templates/project_detail.html:18
+msgid "Collaborators:"
+msgstr "合作者："
+
+#: templates/project_detail.html:19
+msgid "No collaborators for this project."
+msgstr "该项目暂无合作者。"
+
+#: templates/project_detail.html:20
+msgid "Invite Collaborator"
+msgstr "邀请合作者"
+
+#: templates/project_detail.html:21
+msgid "Invite"
+msgstr "邀请"
+
+#: templates/project_detail.html:22
+msgid "Back to My Projects"
+msgstr "返回我的项目"
+
+#: templates/project_detail.html:23
+msgid "Edit Project"
+msgstr "编辑项目"
+
+#: templates/project_detail.html:24
+msgid "Delete Project"
+msgstr "删除项目"
+
+#: templates/about.html:5
+msgid "Why Invest in Eritrea?"
+msgstr "为什么投资厄立特里亚？"
+
+#: templates/about.html:6
+msgid ""
+"Eritrea is a land of untapped investment opportunities. With its strategic "
+"location along the Red Sea, abundant natural resources, and government "
+"commitment to fostering a business-friendly environment, Eritrea is becoming "
+"a prime destination for global investors."
+msgstr ""
+"厄立特里亚是一个充满未开发投资机会的国家。凭借其红海沿岸的战略位置、"
+"丰富的自然资源以及政府致力于营造商业友好环境，"
+"厄立特里亚正成为全球投资者的首选目的地。"
+
+#: templates/about.html:11
+msgid "Strategic Location"
+msgstr "战略位置"
+
+#: templates/about.html:12
+msgid ""
+"Situated along the Red Sea, Eritrea offers unmatched access to global trade "
+"routes, connecting Africa, the Middle East, and Asia."
+msgstr ""
+"厄立特里亚位于红海沿岸，提供无与伦比的全球贸易通道，"
+"连接非洲、中东和亚洲。"
+
+#: templates/about.html:17
+msgid "Natural Resources"
+msgstr "自然资源"
+
+#: templates/about.html:18
+msgid ""
+"Eritrea is rich in minerals, including gold, silver, and copper, with vast "
+"untapped reserves waiting for exploration."
+msgstr ""
+"厄立特里亚拥有丰富的矿产资源，包括黄金、白银和铜，"
+"还有大量未开发的储量等待勘探。"
+
+#: templates/about.html:23
+msgid "Investment Policies"
+msgstr "投资政策"
+
+#: templates/about.html:24
+msgid ""
+"With pro-investment policies and a stable political climate, Eritrea is an "
+"ideal place for sustainable growth."
+msgstr ""
+"凭借有利的投资政策和稳定的政治环境，"
+"厄立特里亚是可持续增长的理想之地。"
+
+#: templates/about.html:30
+msgid "Go Back to Home"
+msgstr "返回主页"
+
+#: templates/project_detail.html:25
+msgid "Project or collaborator ID is missing."
+msgstr "项目或合作者 ID 丢失。"
+
+#: templates/project_detail.html:26
+msgid "An error occurred:"
+msgstr "发生错误："
+
+#: templates/project_detail.html:27
+msgid "An unexpected error occurred. Please try again."
+msgstr "发生意外错误。请重试。"
+
+#: templates/base.html
+msgid "Your support makes a difference. Donate securely with PayPal"
+msgstr "您的支持至关重要。请通过 PayPal 安全捐赠。"
+
+#: templates/base.html
+msgid "Multisector"
+msgstr "多行业"
+
+#: templates/base.html
+msgid "Real Estate"
+msgstr "房地产"
+
+#: templates/base.html
+msgid "Water Resources"
+msgstr "水资源"
+
+#: templates/base.html
+msgid "Food Processing"
+msgstr "食品加工"
+
+#: templates/base.html
+msgid "Public Admin"
+msgstr "公共管理"
+
+#: templates/base.html
+msgid "Register"
+msgstr "注册"
+
+#: templates/base.html
+msgid "Login"
+msgstr "登录"
+
+#: templates/base.html
+msgid "Investment Opportunity in"
+msgstr "投资机会于"
+
+#: templates/base.html
+msgid "Eritrea"
+msgstr "厄立特里亚"
+
+#: templates/base.html
+msgid "Open"
+msgstr "开放"
+
+#: templates/landing.html:21
+msgid "Menu"
+msgstr "菜单"
+
+#: templates/base.html:5
+msgid "Create New Project"
+msgstr "创建新项目"
+
+#: templates/landing.html:21
+msgid "ERITREA INVESTMENT PLATFORM"
+msgstr "厄立特里亚投资平台"
+

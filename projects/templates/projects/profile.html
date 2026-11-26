@@ -1,0 +1,33 @@
+{% load i18n %} 
+{% load static %}
+
+<h1>{% trans "Your Profile" %}</h1>
+
+<p><strong>{% trans "Name" %}:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+<p><strong>{% trans "Email" %}:</strong> {{ user.email }}</p>
+<p><strong>{% trans "Bio" %}:</strong> {{ profile.bio }}</p>
+<p><strong>{% trans"Country" %}:</strong> {{ user.userprofile.country }}</p>
+
+
+{% if profile.profile_picture %}
+    <img src="{{ profile.profile_picture.url }}" alt="{% trans 'Profile Picture' %}" width="150px" height="150px">
+{% else %}
+    <p>{% trans "No profile picture uploaded." %}</p>
+{% endif %}
+
+<hr>
+
+{% if user.is_superuser %}
+    <!-- 🔹 Admins can edit ANY profile -->
+    <h3>{% trans "Manage Users" %}</h3>
+    <ul>
+        {% for u in users %}
+            <li>
+                {{ u.username }} - <a href="{% url 'edit_user_profile' u.id %}">{% trans "Edit" %}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <!-- 🔹 Regular users can only edit THEIR OWN profile -->
+    <a href="{% url 'edit_profile' %}">{% trans "Edit Profile" %}</a>
+{% endif %}

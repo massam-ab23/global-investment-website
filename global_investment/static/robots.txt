@@ -1,0 +1,9 @@
+# Allows all search engines (Google, Bing, Yahoo, etc.)
+User-agent: *
+
+# Nothing is disallowed (means search engines can crawl everything).
+Disallow:
+
+# Tells search engines where your sitemap is located for better indexing.
+# (Update "yourdomain.com" to your actual domain)
+Sitemap: https://eritreaninvestment.com/sitemap.xml

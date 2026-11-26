@@ -1,0 +1,819 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-06 11:52+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\global_investment\settings.py:185
+msgid "Arabic"
+msgstr "Arabisch"
+
+#: .\global_investment\settings.py:186
+msgid "Chinese"
+msgstr "Chinesisch"
+
+#: .\global_investment\settings.py:187
+msgid "German"
+msgstr "Deutsch"
+
+#: .\global_investment\settings.py:188
+msgid "French"
+msgstr "Französisch"
+
+#: .\global_investment\settings.py:189
+msgid "Italian"
+msgstr "Italienisch"
+
+#: .\global_investment\settings.py:190
+msgid "Russian"
+msgstr "Russisch"
+
+#: .\global_investment\settings.py:191
+msgid "Svenska"
+msgstr "Schwedisch"
+
+#: .\global_investment\settings.py:192
+msgid "Tigrinya"
+msgstr "Tigrinya"
+
+#: .\global_investment\settings.py:193
+msgid "English"
+msgstr "Englisch"
+
+#: .\projects\models.py:171 .\users\models.py:43
+msgid "Welcome to Eritrea Investment Platform"
+msgstr "Willkommen auf der Investitionsplattform Eritreas"
+
+#: .\projects\templates\projects\language_selection.html:7
+msgid "Select Language"
+msgstr "Sprache auswählen"
+
+#: .\projects\templates\projects\language_selection.html:13
+msgid "Select a Language"
+msgstr "Wählen Sie eine Sprache"
+
+#: .\projects\views.py:472 .\users\views.py:46
+msgid "This text will be translated."
+msgstr "Dieser Text wird übersetzt."
+
+
+#: templates/landing.html:10
+msgid "Eritrea: A World of Untapped Investment Opportunities"
+msgstr "Eritrea: Eine Welt ungenutzter Investitionsmöglichkeiten"
+
+#: templates/landing.html:11
+msgid "Explore Projects"
+msgstr "Projekte erkunden"
+
+#: templates/landing.html:20
+msgid "Agriculture"
+msgstr "Landwirtschaft"
+
+#: templates/landing.html:21
+msgid ""
+"The agriculture sector in Eritrea offers opportunities for sustainable "
+"farming, export-oriented crops, and irrigation systems. With fertile lands "
+"and untapped potential, investments in agricultural technology and "
+"infrastructure can significantly boost productivity."
+msgstr ""
+"Der Agrarsektor in Eritrea bietet Möglichkeiten für nachhaltige "
+"Landwirtschaft, exportorientierte Kulturen und Bewässerungssysteme. Mit "
+"fruchtbaren Böden und ungenutztem Potenzial können Investitionen in "
+"landwirtschaftliche Technologie und Infrastruktur die Produktivität "
+"erheblich steigern."
+
+#: templates/landing.html:30
+msgid "Energy"
+msgstr "Energie"
+
+#: templates/landing.html:31
+msgid ""
+"Eritrea is committed to renewable energy development, including solar, wind, "
+"and hydroelectric projects. The nation’s geographical advantage and "
+"government support make it a prime location for clean energy investments."
+msgstr ""
+"Eritrea engagiert sich für die Entwicklung erneuerbarer Energien, "
+"einschließlich Solar-, Wind- und Wasserkraftprojekten. Die geografische Lage "
+"des Landes und die Unterstützung der Regierung machen es zu einem idealen "
+"Standort für Investitionen in saubere Energie."
+
+#: templates/landing.html:40
+msgid "Mining"
+msgstr "Bergbau"
+
+#: templates/landing.html:41
+msgid ""
+"Eritrea is rich in natural resources, including gold, potash, and base "
+"metals. The mining sector is poised for growth, with untapped reserves and "
+"favorable policies encouraging exploration and extraction."
+msgstr ""
+"Eritrea ist reich an natürlichen Ressourcen, darunter Gold, Pottasche und "
+"Basismetalle. Der Bergbausektor steht vor einem Wachstum, mit ungenutzten "
+"Reserven und günstigen politischen Rahmenbedingungen, die Erkundung und "
+"Abbau fördern."
+
+#: templates/landing.html:50
+msgid "Education"
+msgstr "Bildung"
+
+#: templates/landing.html:51
+msgid ""
+"Investments in education infrastructure such as schools, universities, and "
+"vocational training centers are vital to Eritrea's economic growth. "
+"Opportunities exist for public-private partnerships to expand access to "
+"quality education."
+msgstr ""
+"Investitionen in Bildungsinfrastruktur wie Schulen, Universitäten und "
+"Berufsbildungszentren sind entscheidend für das Wirtschaftswachstum in "
+"Eritrea. Es bestehen Möglichkeiten für öffentlich-private Partnerschaften, "
+"um den Zugang zu qualitativ hochwertiger Bildung zu erweitern."
+
+#: templates/landing.html:60
+msgid "Tourism"
+msgstr "Tourismus"
+
+#: templates/landing.html:61
+msgid ""
+"Eritrea's rich cultural heritage, historical sites, and pristine Red Sea "
+"coastline offer immense potential for tourism development. Eco-tourism, "
+"historical site restoration, and diving resorts are key growth areas."
+msgstr ""
+"Eritreas reiches kulturelles Erbe, historische Stätten und die unberührte "
+"Küste des Roten Meeres bieten enormes Potenzial für die "
+"Tourismusentwicklung. Ökotourismus, Restaurierung historischer Stätten und "
+"Tauchresorts sind wichtige Wachstumsbereiche."
+
+#: templates/landing.html:70
+msgid "Irrigation"
+msgstr "Bewässerung"
+
+#: templates/landing.html:71
+msgid ""
+"Invest in advanced irrigation systems to enhance agricultural productivity "
+"in arid regions. Opportunities include smart irrigation technologies, drip "
+"systems, and sustainable water management solutions to support crop yields."
+msgstr ""
+"Investieren Sie in fortschrittliche Bewässerungssysteme, um die "
+"landwirtschaftliche Produktivität in trockenen Regionen zu steigern. Zu den "
+"Möglichkeiten gehören intelligente Bewässerungstechnologien, "
+"Tropfbewässerungssysteme und nachhaltige Lösungen für das Wassermanagement, "
+"um die Ernteerträge zu unterstützen."
+
+#: templates/landing.html:80
+msgid "Technology"
+msgstr "Technologie"
+
+#: templates/landing.html:81
+msgid ""
+"The technology sector in Eritrea is emerging, with opportunities in "
+"artificial intelligence, robotics, and software development. Investments in "
+"tech parks and startups can drive innovation."
+msgstr ""
+"Der Technologiesektor in Eritrea entwickelt sich, mit Möglichkeiten in den "
+"Bereichen künstliche Intelligenz, Robotik und Softwareentwicklung. "
+"Investitionen in Technologieparks und Start-ups können Innovationen "
+"vorantreiben."
+
+#: templates/landing.html:90
+msgid "Healthcare"
+msgstr "Gesundheitswesen"
+
+#: templates/landing.html:91
+msgid ""
+"Opportunities exist to build modern healthcare facilities, introduce "
+"telemedicine services, and manufacture pharmaceuticals locally. Eritrea’s "
+"growing population presents significant potential for healthcare investments."
+msgstr ""
+"Es gibt Möglichkeiten, moderne Gesundheitseinrichtungen zu bauen, "
+"Telemedizin-Dienstleistungen einzuführen und Medikamente lokal zu "
+"produzieren. Eritreas wachsende Bevölkerung bietet erhebliches Potenzial für "
+"Investitionen in das Gesundheitswesen."
+
+#: templates/landing.html:100
+msgid "Finance"
+msgstr "Finanzen"
+
+#: templates/landing.html:101
+msgid ""
+"The financial sector is expanding with opportunities in microfinance, "
+"fintech solutions, and banking modernization. Investors can play a key role "
+"in shaping Eritrea’s financial infrastructure."
+msgstr ""
+"Der Finanzsektor wächst mit Möglichkeiten im Bereich Mikrofinanz, Fintech-"
+"Lösungen und der Modernisierung von Banken. Investoren können eine "
+"Schlüsselrolle bei der Gestaltung der Finanzinfrastruktur Eritreas spielen."
+
+#: templates/landing.html:110
+msgid "Robotics"
+msgstr "Robotik"
+
+#: templates/landing.html:111
+msgid ""
+"With global advancements in robotics, Eritrea presents opportunities for "
+"introducing automation in industries such as agriculture, manufacturing, and "
+"logistics."
+msgstr ""
+"Mit den globalen Fortschritten in der Robotik bietet Eritrea Möglichkeiten, "
+"Automatisierung in Branchen wie Landwirtschaft, Fertigung und Logistik "
+"einzuführen."
+
+#: templates/landing.html:120
+msgid "Artificial Intelligence"
+msgstr "Künstliche Intelligenz"
+
+#: templates/landing.html:121
+msgid ""
+"The AI sector is burgeoning worldwide, and Eritrea can capitalize on this by "
+"fostering innovation in machine learning, predictive analytics, and AI-"
+"driven solutions."
+msgstr ""
+"Der KI-Sektor wächst weltweit, und Eritrea kann davon profitieren, indem es "
+"Innovationen im Bereich maschinelles Lernen, prädiktive Analysen und KI-"
+"gestützte Lösungen fördert."
+
+#: templates/landing.html:130
+msgid "Manufacturing"
+msgstr "Produktion"
+
+#: templates/landing.html:131
+msgid ""
+"Investments in manufacturing facilities for textiles, building materials, "
+"and consumer goods can stimulate Eritrea’s industrial growth. Export-driven "
+"manufacturing is particularly promising."
+msgstr ""
+"Investitionen in Produktionsanlagen für Textilien, Baumaterialien und "
+"Konsumgüter können das industrielle Wachstum Eritreas ankurbeln. "
+"Exportorientierte Produktion ist besonders vielversprechend."
+
+#: templates/landing.html:140
+msgid "Retail"
+msgstr "Einzelhandel"
+
+#: templates/landing.html:141
+msgid ""
+"The retail sector is evolving, with opportunities in e-commerce, supply "
+"chain logistics, and modern retail infrastructure development."
+msgstr ""
+"Der Einzelhandelssektor entwickelt sich weiter, mit Möglichkeiten im E-"
+"Commerce, der Logistik von Lieferketten und der Entwicklung moderner "
+"Einzelhandelsinfrastrukturen."
+
+#: templates/landing.html:150
+msgid "Real-Estate"
+msgstr "Immobilien"
+
+#: templates/landing.html:151
+msgid ""
+"Eritrea’s urbanization trends present opportunities for real estate "
+"development, including residential, commercial, and industrial properties."
+msgstr ""
+"Die Urbanisierungstendenzen Eritreas bieten Möglichkeiten für die "
+"Entwicklung von Immobilien, einschließlich Wohn-, Gewerbe- und "
+"Industrieimmobilien."
+
+#: templates/landing.html:160
+msgid "Transportation"
+msgstr "Transport"
+
+#: templates/landing.html:161
+msgid ""
+"Investments in transportation infrastructure such as roads, railways, and "
+"ports can significantly enhance Eritrea’s logistics and trade capabilities."
+msgstr ""
+"Investitionen in die Verkehrsinfrastruktur wie Straßen, Eisenbahnen und "
+"Häfen können die logistischen und Handelskapazitäten Eritreas erheblich "
+"verbessern."
+
+#: templates/landing.html:170
+msgid "Logistics"
+msgstr "Logistik"
+
+#: templates/landing.html:171
+msgid ""
+"Eritrea’s strategic Red Sea location offers potential for logistics hubs, "
+"warehousing, and supply chain optimization."
+msgstr ""
+"Eritreas strategische Lage am Roten Meer bietet Potenzial für Logistikhubs, "
+"Lagerhaltung und Optimierung der Lieferkette."
+
+#: templates/landing.html:180
+msgid "Media"
+msgstr "Medien"
+
+#: templates/landing.html:181
+msgid ""
+"The media sector in Eritrea is ripe for development, including digital "
+"content creation, television broadcasting, and film production."
+msgstr ""
+"Der Mediensektor in Eritrea ist bereit für Entwicklungen, einschließlich der "
+"Erstellung digitaler Inhalte, des Fernsehsendebetriebs und der "
+"Filmproduktion."
+
+#: templates/landing.html:190
+msgid "Entertainment"
+msgstr "Unterhaltung"
+
+#: templates/landing.html:191
+msgid ""
+"Opportunities exist in developing entertainment facilities, including "
+"theaters, amusement parks, and online streaming platforms."
+msgstr ""
+"Es gibt Möglichkeiten, Unterhaltungseinrichtungen zu entwickeln, darunter "
+"Theater, Vergnügungsparks und Online-Streaming-Plattformen."
+
+#: templates/landing.html:200
+msgid "Sports"
+msgstr "Sport"
+
+#: templates/landing.html:201
+msgid ""
+"Investments in sports infrastructure, including stadiums, training centers, "
+"and youth sports programs, can promote talent development and tourism."
+msgstr ""
+"Investitionen in die Sportinfrastruktur, einschließlich Stadien, "
+"Trainingszentren und Jugendsportprogramme, können die Talententwicklung und "
+"den Tourismus fördern."
+
+#: templates/landing.html:210
+msgid "Aerospace"
+msgstr "Luft- und Raumfahrt"
+
+#: templates/landing.html:211
+msgid ""
+"The aerospace sector offers opportunities for partnerships in aviation "
+"technology, maintenance services, and airport infrastructure development."
+msgstr ""
+"Der Luft- und Raumfahrtsektor bietet Möglichkeiten für Partnerschaften in "
+"der Flugzeugtechnik, Wartungsdiensten und der Entwicklung von "
+"Flughafeninfrastrukturen."
+
+#: templates/landing.html:220
+msgid "Defense"
+msgstr "Verteidigung"
+
+#: templates/landing.html:221
+msgid ""
+"Opportunities exist in defense technology, cybersecurity, and manufacturing "
+"of equipment to bolster Eritrea’s national security."
+msgstr ""
+"Es gibt Möglichkeiten in der Verteidigungstechnologie, Cybersicherheit und "
+"der Herstellung von Ausrüstung zur Stärkung der nationalen Sicherheit "
+"Eritreas."
+
+#: templates/landing.html:230
+msgid "Environment"
+msgstr "Umwelt"
+
+#: templates/landing.html:231
+msgid ""
+"Invest in sustainable projects focused on environmental conservation, waste "
+"management, and renewable energy integration."
+msgstr ""
+"Investieren Sie in nachhaltige Projekte, die auf Umweltschutz, "
+"Abfallmanagement und die Integration erneuerbarer Energien ausgerichtet sind."
+
+#: templates/landing.html:240
+msgid "Water-Resources"
+msgstr "Wasserressourcen"
+
+#: templates/landing.html:241
+msgid ""
+"Projects in water resource management, including desalination, irrigation, "
+"and water purification systems, are critical to Eritrea's development."
+msgstr ""
+"Projekte im Bereich Wasserressourcenmanagement, einschließlich Entsalzung, "
+"Bewässerung und Wasseraufbereitungssysteme, sind entscheidend für die "
+"Entwicklung Eritreas."
+
+#: templates/landing.html:250
+msgid "Food-Processing"
+msgstr "Lebensmittelverarbeitung"
+
+#: templates/landing.html:251
+msgid ""
+"Opportunities exist in value-added food processing, packaging, and export of "
+"locally produced agricultural goods."
+msgstr ""
+"Es gibt Möglichkeiten in der wertschöpfenden Lebensmittelverarbeitung, "
+"Verpackung und dem Export von lokal produzierten Agrarprodukten."
+
+#: templates/landing.html:260
+msgid "Pharmaceuticals"
+msgstr "Pharmazeutika"
+
+#: templates/landing.html:261
+msgid ""
+"Invest in the manufacturing and distribution of pharmaceuticals to cater to "
+"Eritrea's growing healthcare demands."
+msgstr ""
+"Investieren Sie in die Herstellung und den Vertrieb von Pharmazeutika, um "
+"den wachsenden Bedarf an Gesundheitsversorgung in Eritrea zu decken."
+
+#: templates/landing.html:270
+msgid "Biotechnology"
+msgstr "Biotechnologie"
+
+#: templates/landing.html:271
+msgid ""
+"Eritrea offers potential in biotechnology innovations, particularly in "
+"agriculture, healthcare, and environmental solutions."
+msgstr ""
+"Eritrea bietet Potenzial für biotechnologische Innovationen, insbesondere in "
+"den Bereichen Landwirtschaft, Gesundheitswesen und Umweltlösungen."
+
+#: templates/landing.html:280
+msgid "Telecommunications"
+msgstr "Telekommunikation"
+
+#: templates/landing.html:281
+msgid ""
+"The telecommunications sector is growing, with opportunities in expanding "
+"internet access, mobile services, and digital communication infrastructure."
+msgstr ""
+"Der Telekommunikationssektor wächst, mit Möglichkeiten zur Erweiterung des "
+"Internetzugangs, mobiler Dienste und der digitalen "
+"Kommunikationsinfrastruktur."
+
+#: templates/landing.html:290 templates/base.html
+msgid "E-Commerce"
+msgstr "E-Commerce"
+
+#: templates/landing.html:291
+msgid ""
+"E-commerce is an untapped market in Eritrea, with potential for online "
+"marketplaces, payment gateways, and last-mile delivery services."
+msgstr ""
+"E-Commerce ist ein unerschlossener Markt in Eritrea, mit Potenzial für "
+"Online-Marktplätze, Zahlungsgateways und Zustelldienste auf der letzten "
+"Meile."
+
+#: templates/landing.html:300
+msgid "Consulting"
+msgstr "Beratung"
+
+#: templates/landing.html:301
+msgid ""
+"Opportunities exist in management consulting, business advisory services, "
+"and training programs to support Eritrea’s growing industries."
+msgstr ""
+"Es gibt Möglichkeiten in der Managementberatung, Geschäftsanalyse und "
+"Trainingsprogrammen, um die wachsenden Industrien Eritreas zu unterstützen."
+
+#: templates/landing.html:310
+msgid "Fashion"
+msgstr "Mode"
+
+#: templates/landing.html:311
+msgid ""
+"Investments in fashion design, textile manufacturing, and retail can promote "
+"Eritrea’s cultural heritage and export potential."
+msgstr ""
+"Investitionen in Modedesign, Textilherstellung und Einzelhandel können das "
+"kulturelle Erbe Eritreas und dessen Exportpotenzial fördern."
+
+#: templates/landing.html:320
+msgid "Automotive"
+msgstr "Automobilindustrie"
+
+#: templates/landing.html:321
+msgid ""
+"Opportunities in automotive assembly plants, electric vehicles, and spare "
+"parts manufacturing can contribute to Eritrea’s industrial growth."
+msgstr ""
+"Chancen in Automobilmontagewerken, Elektrofahrzeugen und der Herstellung von "
+"Ersatzteilen können zum industriellen Wachstum Eritreas beitragen."
+
+#: templates/landing.html:330
+msgid "Non-Profit"
+msgstr "Gemeinnützig"
+
+#: templates/landing.html:331
+msgid ""
+"Support non-profit initiatives focused on education, healthcare, and "
+"community development to make a meaningful impact."
+msgstr ""
+"Unterstützen Sie gemeinnützige Initiativen, die sich auf Bildung, "
+"Gesundheitswesen und Gemeinwesenentwicklung konzentrieren, um einen "
+"bedeutenden Einfluss zu erzielen."
+
+#: templates/landing.html:340
+msgid "Public-Administration"
+msgstr "Öffentliche Verwaltung"
+
+#: templates/landing.html:341
+msgid ""
+"Collaborate on projects to modernize public administration, including "
+"digital governance and infrastructure planning."
+msgstr ""
+"Arbeiten Sie an Projekten zur Modernisierung der öffentlichen Verwaltung, "
+"einschließlich digitaler Governance und Infrastrukturplanung."
+
+#: templates/base.html:10
+msgid "Eritrea Investment Platform"
+msgstr "Investitionsplattform Eritrea"
+
+#: templates/base.html:10
+msgid "Home"
+msgstr "Startseite"
+
+#: templates/base.html:12
+msgid "About Eritrea"
+msgstr "Über Eritrea"
+
+#: templates/base.html:13
+msgid "Create new Project"
+msgstr "Neues Projekt erstellen"
+
+#: templates/base.html:14
+msgid "My Projects"
+msgstr "Meine Projekte"
+
+#: templates/base.html:15 templates/project_detail.html:17
+msgid "Apply to Invest"
+msgstr "Bewerben Sie sich für Investitionen"
+
+#: templates/base.html:16
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: templates/base.html:17
+msgid "Contact Us"
+msgstr "Kontaktieren Sie uns"
+
+#: templates/landing.html:12
+msgid ""
+"Explore diverse sectors, abundant resources, and endless possibilities for "
+"growth."
+msgstr ""
+"Entdecken Sie verschiedene Sektoren, reichhaltige Ressourcen und unbegrenzte "
+"Wachstumschancen."
+
+#: templates/landing.html:21
+msgid "Search by Title"
+msgstr "Nach Titel suchen"
+
+#: templates/landing.html:22
+msgid "All Sectors"
+msgstr "Alle Sektoren"
+
+#: templates/landing.html:23
+msgid "Search by Country"
+msgstr "Nach Land suchen"
+
+#: templates/landing.html:24
+msgid "Search"
+msgstr "Suchen"
+
+
+#: templates/landing.html:50
+msgid "Learn More"
+msgstr "Mehr erfahren"
+
+#: templates/landing.html:60
+msgid "Strategic Red Sea location for trade and logistics."
+msgstr "Strategische Lage am Roten Meer für Handel und Logistik."
+
+#: templates/landing.html:61
+msgid "Abundant natural resources and investment-friendly policies."
+msgstr "Reiche natürliche Ressourcen und investitionsfreundliche Politiken."
+
+#: templates/landing.html:62
+msgid "Opportunities across diverse sectors."
+msgstr "Chancen in verschiedenen Sektoren."
+
+#: templates/base.html:60
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:70
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/apply_to_invest.html:11
+msgid ""
+"Please fill out the form below to express your interest in investing in a "
+"sector. Our team will review your application and get back to you."
+msgstr ""
+"Bitte füllen Sie das untenstehende Formular aus, um Ihr Interesse an einer "
+"Investition in einen Sektor zu bekunden. Unser Team wird Ihre Bewerbung "
+"prüfen und sich bei Ihnen melden."
+
+#: templates/apply_to_invest.html:20
+msgid "Title:"
+msgstr "Titel:"
+
+#: templates/apply_to_invest.html:21 templates/project_detail.html:11
+msgid "Sector:"
+msgstr "Sektor:"
+
+#: templates/apply_to_invest.html:22 templates/project_detail.html:12
+msgid "Country:"
+msgstr "Land:"
+
+#: templates/apply_to_invest.html:23 templates/project_detail.html:13
+msgid "Investment Required:"
+msgstr "Erforderliche Investition:"
+
+#: templates/apply_to_invest.html:24
+msgid "Contact Information:"
+msgstr "Kontaktinformationen:"
+
+#: templates/apply_to_invest.html:25
+msgid "Why are you interested in this project?"
+msgstr "Warum interessieren Sie sich für dieses Projekt?"
+
+#: templates/apply_to_invest.html:26
+msgid "Submit Application"
+msgstr "Bewerbung einreichen"
+
+#: templates/apply_to_invest.html:27
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/project_detail.html:10
+msgid "Description:"
+msgstr "Beschreibung:"
+
+#: templates/project_detail.html:14
+msgid "Status:"
+msgstr "Status:"
+
+#: templates/project_detail.html:15
+msgid "Created On:"
+msgstr "Erstellt am:"
+
+#: templates/project_detail.html:16
+msgid "Last Updated:"
+msgstr "Zuletzt aktualisiert:"
+
+#: templates/project_detail.html:18
+msgid "Collaborators:"
+msgstr "Mitarbeiter:"
+
+#: templates/project_detail.html:19
+msgid "No collaborators for this project."
+msgstr "Keine Mitarbeiter für dieses Projekt."
+
+#: templates/project_detail.html:20
+msgid "Invite Collaborator"
+msgstr "Mitarbeiter einladen"
+
+#: templates/project_detail.html:21
+msgid "Invite"
+msgstr "Einladen"
+
+#: templates/project_detail.html:22
+msgid "Back to My Projects"
+msgstr "Zurück zu meinen Projekten"
+
+#: templates/project_detail.html:23
+msgid "Edit Project"
+msgstr "Projekt bearbeiten"
+
+#: templates/project_detail.html:24
+msgid "Delete Project"
+msgstr "Projekt löschen"
+
+#: templates/about.html:5
+msgid "Why Invest in Eritrea?"
+msgstr "Warum in Eritrea investieren?"
+
+#: templates/about.html:6
+msgid ""
+"Eritrea is a land of untapped investment opportunities. With its strategic "
+"location along the Red Sea, abundant natural resources, and government "
+"commitment to fostering a business-friendly environment, Eritrea is becoming "
+"a prime destination for global investors."
+msgstr ""
+"Eritrea ist ein Land mit ungenutzten Investitionsmöglichkeiten. Durch seine "
+"strategische Lage am Roten Meer, seine reichen natürlichen Ressourcen und "
+"das Engagement der Regierung für ein unternehmensfreundliches Umfeld wird "
+"Eritrea zu einem erstklassigen Ziel für globale Investoren."
+
+#: templates/about.html:11
+msgid "Strategic Location"
+msgstr "Strategische Lage"
+
+#: templates/about.html:12
+msgid ""
+"Situated along the Red Sea, Eritrea offers unmatched access to global trade "
+"routes, connecting Africa, the Middle East, and Asia."
+msgstr ""
+"Entlang des Roten Meeres gelegen, bietet Eritrea einen beispiellosen Zugang "
+"zu globalen Handelsrouten, die Afrika, den Nahen Osten und Asien verbinden."
+
+#: templates/about.html:17
+msgid "Natural Resources"
+msgstr "Natürliche Ressourcen"
+
+#: templates/about.html:18
+msgid ""
+"Eritrea is rich in minerals, including gold, silver, and copper, with vast "
+"untapped reserves waiting for exploration."
+msgstr ""
+"Eritrea ist reich an Mineralien, darunter Gold, Silber und Kupfer, mit "
+"großen ungenutzten Reserven, die auf Erkundung warten."
+
+#: templates/about.html:23
+msgid "Investment Policies"
+msgstr "Investitionsrichtlinien"
+
+#: templates/about.html:24
+msgid ""
+"With pro-investment policies and a stable political climate, Eritrea is an "
+"ideal place for sustainable growth."
+msgstr ""
+"Mit investitionsfreundlichen Richtlinien und einem stabilen politischen "
+"Klima ist Eritrea ein idealer Ort für nachhaltiges Wachstum."
+
+#: templates/about.html:30
+msgid "Go Back to Home"
+msgstr "Zurück zur Startseite"
+
+#: templates/project_detail.html:25
+msgid "Project or collaborator ID is missing."
+msgstr "Projekt- oder Mitarbeiter-ID fehlt."
+
+#: templates/project_detail.html:26
+msgid "An error occurred:"
+msgstr "Ein Fehler ist aufgetreten:"
+
+#: templates/project_detail.html:27
+msgid "An unexpected error occurred. Please try again."
+msgstr ""
+"Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+
+
+#: templates/base.html
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
+#: templates/base.html
+msgid "Register"
+msgstr "Registrieren"
+
+#: templates/base.html
+msgid "Login"
+msgstr "Anmelden"
+
+#: templates/base.html
+msgid "Your support makes a difference. Donate securely with PayPal"
+msgstr "Ihre Unterstützung macht einen Unterschied. Spenden Sie sicher mit PayPal."
+
+#: templates/base.html
+msgid "Multisector"
+msgstr "Multisektor"
+
+#: templates/base.html
+msgid "Real Estate"
+msgstr "Immobilien"
+
+#: templates/base.html
+msgid "Water Resources"
+msgstr "Wasserressourcen"
+
+#: templates/base.html
+msgid "Food Processing"
+msgstr "Lebensmittelverarbeitung"
+
+#: templates/base.html
+msgid "Public Admin"
+msgstr "Öffentliche Verwaltung"
+
+#: templates/base.html
+msgid "Investment Opportunity in"
+msgstr "Investitionsmöglichkeit in"
+
+#: templates/base.html
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: templates/base.html
+msgid "Open"
+msgstr "Offen"
+
+#: templates/landing.html:21
+msgid "Menu"
+msgstr "Menü"
+
+#: templates/base.html:5
+msgid "Create New Project"
+msgstr "Neues Projekt erstellen"
+
+#: templates/landing.html:21
+msgid "ERITREA INVESTMENT PLATFORM"
+msgstr "Eritrea-Investitionsplattform"

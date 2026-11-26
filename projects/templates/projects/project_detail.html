@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+<!-- ✅ Background Image for Investment Detail Pages -->
+<style>
+    
+    .sector-banner {
+    background: url("{% static 'images/red-sea-coastline.jpg' %}") no-repeat center center/cover;
+    color: white;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+
+    .sector-banner h1 {
+        position: relative;
+        z-index: 2; /* Ensures text stays visible */
+    }
+</style>
+
+
+<!-- ✅ Background Banner -->
+<div class="sector-banner">
+    <div class="overlay">
+        <h1>{% trans "Investment Opportunity in" %} {{ project.sector }}</h1>
+    </div>
+</div>
+
+<!-- ✅ Project Details -->
+<div class="container py-5">
+    <h1 class="text-center mb-4">{{ project.title }}</h1>
+    
+    <div class="row align-items-center">
+        <div class="col-md-5 text-center mb-4">
+            <img src="{{ image_url }}" alt="{{ project.sector }}" class="img-fluid rounded shadow">
+        </div>
+
+        <div class="col-md-7">
+            <p><strong>{% trans "Description:" %}</strong> {{ project.description }}</p>
+            <p><strong>{% trans "Sector:" %}</strong> {{ project.sector }}</p>
+            <p><strong>{% trans "Country:" %}</strong> {{ project.country }}</p>
+            <p><strong>{% trans "Investment Required:" %}</strong> ${{ project.investment_required|floatformat:2 }}</p>
+            <p><strong>{% trans "Status:" %}</strong> {{ project.get_status_display }}</p>
+            <p><strong>{% trans "Created On:" %}</strong> {{ project.created_at|date:"F j, Y, g:i a" }}</p>
+            <p><strong>{% trans "Last Updated:" %}</strong> {{ project.updated_at|date:"F j, Y, g:i a" }}</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="{% url 'apply_to_invest' project.id %}" class="btn btn-primary">{% trans "Apply to Invest" %}</a>
+    </div>
+
+    <!-- ✅ Show this section only to logged-in users who own the project -->
+    {% if user.is_authenticated and project.owner == user %}
+    
+        <div class="mt-5">
+            <h5>{% trans "Collaborators:" %}</h5>
+            {% if collaborators %}
+                <ul class="list-group">
+                    {% for collaborator in collaborators %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ collaborator.get_full_name|default:collaborator.username }}
+                            <button class="btn btn-danger remove-collaborator-btn"
+                                    data-collaborator-id="{{ collaborator.id }}"
+                                    data-project-id="{{ project.id }}">{% trans "Remove" %}</button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>{% trans "No collaborators for this project." %}</p>
+            {% endif %}
+        </div>
+
+        <div class="mt-4">
+            <h5>{% trans "Invite Collaborator" %}</h5>
+            <form method="POST" class="mb-4">
+                {% csrf_token %}
+                {{ invite_form.as_p }}
+                <button type="submit" class="btn btn-primary">{% trans "Invite" %}</button>
+            </form>
+        </div>
+
+        <div class="mt-4">
+            <a href="{% url 'my_projects' %}" class="btn btn-secondary me-2">{% trans "Back to My Projects" %}</a>
+            <a href="{% url 'edit_project' project.id %}" class="btn btn-primary me-2">{% trans "Edit Project" %}</a>
+            <a href="{% url 'delete_project' project.id %}" class="btn btn-danger">{% trans "Delete Project" %}</a>
+        </div>
+
+    {% endif %}  <!-- ✅ Closes if user is authenticated and project owner -->
+
+</div>
+
+<!-- ✅ JavaScript for Removing Collaborators -->
+{% if user.is_authenticated and project.owner == user %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const removeButtons = document.querySelectorAll('.remove-collaborator-btn');
+
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const collaboratorId = this.dataset.collaboratorId;
+                const projectId = this.dataset.projectId;
+
+                if (!collaboratorId || !projectId) {
+                    alert("{% trans 'Project or collaborator ID is missing.' %}");
+                    return;
+                }
+
+                const csrfToken = '{{ csrf_token }}';
+
+                fetch(`/project/${projectId}/remove-collaborator/${collaboratorId}/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Server Response:', data);
+                    if (data.success) {
+                        alert(data.message);
+                        location.reload();
+                    } else {
+                        alert('{% trans "An error occurred: " %}' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('{% trans "An unexpected error occurred. Please try again." %}');
+                    console.error(error);
+                });
+            });
+        });
+    });
+</script>
+{% endif %}
+
+{% endblock %}

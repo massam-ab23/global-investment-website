@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load i18n %}
+<div class="container py-5 text-center">
+    <h1 class="text-success">{% trans "Application Submitted Successfully!" %}</h1>
+    <p>{% trans "Thank you for your interest. Our team will review your application and get back to you shortly." %}</p>
+    <a href="{% url 'landing' %}" class="btn btn-primary">{% trans "Return to Home" %}</a>
+</div>
+{% endblock %}

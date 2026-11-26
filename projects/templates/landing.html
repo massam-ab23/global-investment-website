@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!--  Video Background for Homepage -->
+<div class="video-container">
+    <video autoplay muted loop playsinline id="bg-video" poster="{% static 'images/red-sea-coastline.jpg' %}">
+        <source src="{% static 'videos/background.mp4' %}" type="video/mp4">
+        <source src="{% static 'videos/background.webm' %}" type="video/webm">
+        <source src="{% static 'videos/background.ogv' %}" type="video/ogg">
+        <!--<img src="{% static 'images/video-fallback.jpg' %}" alt="Video background"> -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!--  Title (Separate) -->
+    <div class="video-title">
+        <h1>{% trans "Eritrea: A World of Untapped Investment Opportunities" %}</h1>
+    </div>
+
+    <!--  Search Form & Subtitle (Separate) -->
+    <div class="video-overlay">
+        <form method="GET" action="{% url 'landing' %}" class="search-form">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" name="search" class="form-control" placeholder="{% trans 'Search by Title' %}">
+                </div>
+                <div class="col-md-4">
+                    <select name="sector" class="form-select">
+                        <option value="">{% trans "All Sectors" %}</option>
+                        {% for sector, display in SECTOR_CHOICES %}
+                            <option value="{{ sector }}">{{ display }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="country" class="form-control" placeholder="{% trans 'Search by Country' %}">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">{% trans "Search" %}</button>
+        </form>
+
+        <!--  Subtitle Moved to Bottom -->
+        <p class="subtext">{% trans "Explore diverse sectors, abundant resources, and endless possibilities for growth." %}</p>
+    </div>
+</div>
+
+<!-- Featured Projects Section -->
+<div class="row">
+    {% for project in featured_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Remaining Projects Section -->
+<div class="row" id="more-sectors">
+    {% for project in remaining_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Featured Projects Section -->
+<!-- landing.html -->
+<div class="row">
+    {% for project in featured_projects %}
+        <div class="col-md-4 text-center">
+            <img id="featuredImage-{{ forloop.counter }}" 
+                 src="{% static 'images/' %}{{ project.sector|lower|slugify }}.jpg" 
+                 alt="{{ project.sector }}" class="img-fluid rounded mb-2">
+            <h3>{% trans project.sector %}</h3>
+            <p>{% trans project.description|truncatewords:20 %}</p>
+            <!-- Learn More button navigates to project details -->
+            <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary btn-sm">{% trans "Learn More" %}</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% comment %}
+<!-- Pagination Controls -->
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'landing' %}?page={{ page_obj.previous_page_number }}&lang={{ request.LANGUAGE_CODE }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">
+                    {% trans "Previous" %}
+                </a>
+            </li>
+        {% endif %}
+        <li class="page-item disabled" aria-disabled="true">
+            <span class="page-link">{% trans "Page" %} {{ page_obj.number }} {% trans "of" %} {{ page_obj.paginator.num_pages }}</span>
+        </li>
+        {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'landing' %}?page={{ page_obj.next_page_number }}&lang={{ request.LANGUAGE_CODE }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sector_filter %}&sector={{ sector_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}">
+                    {% trans "Next" %}
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endcomment %}
+
+<!-- Go Back to Home -->
+<div class="text-center mt-5">
+    <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Go Back to Home" %}</a>
+</div>
+
+<!-- Why Invest in Eritrea -->
+<section class="why-invest py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">{% trans "Why Invest in Eritrea?" %}</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{% trans "Strategic Red Sea location for trade and logistics." %}</li>
+            <li class="list-group-item">{% trans "Abundant natural resources and investment-friendly policies." %}</li>
+            <li class="list-group-item">{% trans "Opportunities across diverse sectors." %}</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Image Fallback Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll("img").forEach(img => {
+            img.addEventListener("error", function() {
+                this.src = "{% static 'images/placeholder.jpg' %}";
+            });
+        });
+    });
+</script>
+{% endblock %}

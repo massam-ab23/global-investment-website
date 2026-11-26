@@ -1,0 +1,5 @@
+<p>Hi {{ collaborator.get_full_name|default:collaborator.username }},</p>
+<p>You have been added as a collaborator to the project <strong>{{ project.title }}</strong>.</p>
+<p>Owner: {{ owner.get_full_name|default:owner.username }}</p>
+<p>View the project by logging into the platform.</p>
+<p>Best regards,<br>The Eritrea Investment Platform Team</p>

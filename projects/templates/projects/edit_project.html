@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% load i18n %}
+<div class="container py-5">
+    <h1 class="mb-4">{% trans "Edit Project" %}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">{% trans "Update Project" %}</button>
+        <a href="{% url 'my_projects' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+    </form>
+</div>
+{% endblock %}

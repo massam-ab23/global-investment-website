@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-4">{% trans "Why Invest in Eritrea?" %}</h1>
+    <p>{% trans "Eritrea is a land of untapped investment opportunities. With its strategic location along the Red Sea, abundant natural resources, and government commitment to fostering a business-friendly environment, Eritrea is becoming a prime destination for global investors." %}</p>
+    
+    <!-- Key Highlights -->
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <img src="{% static 'images/strategic-location.jpg' %}" alt="Strategic Location" class="img-fluid rounded mb-3">
+            <h3>{% trans "Strategic Location" %}</h3>
+            <p>{% trans "Situated along the Red Sea, Eritrea offers unmatched access to global trade routes, connecting Africa, the Middle East, and Asia." %}</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/natural-resources.jpg' %}" alt="Natural Resources" class="img-fluid rounded mb-3">
+            <h3>{% trans "Natural Resources" %}</h3>
+            <p>{% trans "Eritrea is rich in minerals, including gold, silver, and copper, with vast untapped reserves waiting for exploration." %}</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/investment-policies.jpg' %}" alt="Investment Policies" class="img-fluid rounded mb-3">
+            <h3>{% trans "Investment Policies" %}</h3>
+            <p>{% trans "With pro-investment policies and a stable political climate, Eritrea is an ideal place for sustainable growth." %}</p>
+        </div>
+    </div>
+
+    <!-- Add "Go Back to Home" Button -->
+    <div class="mt-4 text-center">
+        <a href="{% url 'landing' %}" class="btn btn-secondary">{% trans "Go Back to Home" %}</a>
+    </div>
+</div>
+{% endblock %}

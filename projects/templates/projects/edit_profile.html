@@ -1,0 +1,50 @@
+{% load i18n %}
+
+<h1>{% trans "Edit Your Profile" %}</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <!-- Styled form fields -->
+    <div>
+        <label for="id_first_name">{% trans "First Name" %}</label>
+        {{ form.first_name }}
+    </div>
+
+    <div>
+        <label for="id_last_name">{% trans "Last Name" %}</label>
+        {{ form.last_name }}
+    </div>
+
+    <div>
+        <label for="id_email">{% trans "Email" %}</label>
+        {{ form.email }}
+    </div>
+
+    <div>
+        <label for="id_bio">{% trans "Bio" %}</label>
+        {{ form.bio }}
+    </div>
+
+    <div>
+        <label for="id_profile_picture">{% trans "Profile Picture" %}</label>
+        {{ form.profile_picture }}
+    </div>
+
+    <div>
+        <label for="id_country">{% trans "Country" %}</label>
+        {{ form.country }}
+    </div>
+
+    <div>
+        <label for="id_is_premium">{% trans "Is Premium" %}</label>
+        {% if request.user.is_superuser %}
+            {{ form.is_premium }}
+        {% else %}
+            <p>{% trans "Only admins can modify this field." %}</p>
+        {% endif %}
+    </div>
+    
+    <button type="submit" class="btn btn-success">{% trans "Save Changes" %}</button>
+    <a href="{% url 'profile' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+</form>

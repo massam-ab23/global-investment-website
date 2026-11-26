@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="text-align:center;">
+    Calendar - <span style="color: red;">{{ current_year }}</span>
+</h1>
+
+<div class="calendar-container" id="calendar"></div>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+    .calendar-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 20px;
+        max-width: 90vw;
+        margin: auto;
+    }
+    .month {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+    }
+    .month h2 {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        margin: 0;
+        border-radius: 8px 8px 0 0;
+    }
+    .highlight-month h2 {
+        background: red !important; /* Current month title in red */
+    }
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        padding: 10px;
+    }
+    .day {
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .today { 
+        background: red; 
+        color: white; 
+        font-weight: bold;
+    }
+    .current-weekday {
+        color: red !important; /* Only today's weekday in the current month */
+        font-weight: bold;
+    }
+    .weekdays {
+        font-weight: bold;
+        background: #ddd;
+        padding: 5px;
+    }
+    @media (max-width: 900px) {
+        .calendar-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 600px) {
+        .calendar-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+
+<script>
+    function generateCalendar(year) {
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const today = new Date();
+        const currentMonth = today.getMonth();
+        const currentDay = today.getDate();
+        const currentWeekday = today.getDay();
+        
+        let calendarHTML = "";
+        for (let month = 0; month < 12; month++) {
+            let firstDay = new Date(year, month, 1).getDay();
+            let lastDate = new Date(year, month + 1, 0).getDate();
+            let highlightMonthClass = month === currentMonth ? "highlight-month" : "";
+            
+            calendarHTML += `<div class='month ${highlightMonthClass}'>`;
+            calendarHTML += `<h2>${months[month]}</h2>`;
+            calendarHTML += `<div class='days'>`;
+            
+            for (let i = 0; i < weekdays.length; i++) {
+                let highlightDayClass = (i === currentWeekday && month === currentMonth) ? "current-weekday" : "";
+                calendarHTML += `<div class='day weekdays ${highlightDayClass}'>${weekdays[i]}</div>`;
+            }
+            
+            for (let i = 0; i < firstDay; i++) {
+                calendarHTML += `<div class='day'></div>`;
+            }
+            
+            for (let date = 1; date <= lastDate; date++) {
+                let dayClass = (month === currentMonth && date === currentDay) ? "today" : "";
+                calendarHTML += `<div class='day ${dayClass}'>${date}</div>`;
+            }
+            
+            calendarHTML += `</div></div>`;
+        }
+        document.getElementById("calendar").innerHTML = calendarHTML;
+    }
+
+    var currentYear = parseInt("{{ current_year }}");
+    generateCalendar(currentYear);
+</script>
+
+{% endblock %}
