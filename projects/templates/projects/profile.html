@@ -18,7 +18,6 @@
 <hr>
 
 {% if user.is_superuser %}
-    <!-- 🔹 Admins can edit ANY profile -->
     <h3>{% trans "Manage Users" %}</h3>
     <ul>
         {% for u in users %}
@@ -28,6 +27,5 @@
         {% endfor %}
     </ul>
 {% else %}
-    <!-- 🔹 Regular users can only edit THEIR OWN profile -->
     <a href="{% url 'edit_profile' %}">{% trans "Edit Profile" %}</a>
 {% endif %}
