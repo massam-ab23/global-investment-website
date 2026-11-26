@@ -10,7 +10,7 @@ class StaticViewSitemap(Sitemap):
     def items(self):
         return [
             "landing", "about", "create_project", "contact_us"
-        ]  # ✅ DO NOT include URLs that require arguments like 'apply_to_invest'
+        ]  
 
     def location(self, item):
         return reverse(item)
@@ -25,4 +25,4 @@ class ProjectSitemap(Sitemap):
         return Project.objects.all()
 
     def location(self, obj):
-        return reverse("project_detail", args=[obj.id])  # ✅ Ensure this matches your `urls.py`
+        return reverse("project_detail", args=[obj.id])  

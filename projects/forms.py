@@ -2,7 +2,7 @@ import re
 import decimal
 from django import forms
 from django.core.exceptions import ValidationError
-from projects.models import Project  # Import BOTH models
+from projects.models import Project  
 from django.contrib.auth import get_user_model
 from .models import InvestmentApplication
 from django_recaptcha.fields import ReCaptchaField
@@ -11,7 +11,6 @@ from django.contrib.auth.models import User
 from .models import UserProfile
 
 
-# ✅ Project Form (Fix Missing)
 class ProjectForm(forms.ModelForm):
     """Form for creating a new project."""
     contact_information = forms.CharField(
@@ -51,7 +50,6 @@ class ProjectForm(forms.ModelForm):
         except (ValueError, decimal.InvalidOperation):
             raise ValidationError("Enter a valid investment amount in the format 100,000.00$.")
 
-# ✅ Apply to Invest Form (Improved)
 class ApplyToInvestForm(forms.ModelForm):
     contact_information = forms.CharField(
         max_length=255,
@@ -100,7 +98,6 @@ class ApplyToInvestForm(forms.ModelForm):
             raise forms.ValidationError("Enter a valid investment amount in the format 100,000.00$.")
 
 
-# ✅ ProjectAdminForm (Already Exists)
 class ProjectAdminForm(forms.ModelForm):
     investment_required = forms.CharField()
 
@@ -125,7 +122,6 @@ class ProjectAdminForm(forms.ModelForm):
         fields = '__all__'
 
 
-# ✅ Collaborator Invite Form (Already Exists)
 class CollaboratorInviteForm(forms.Form):
     email_or_username = forms.CharField(
         label="Collaborator's Email or Username",
@@ -161,7 +157,7 @@ class UserProfileForm(forms.ModelForm):
     def clean_country(self):
         country = self.cleaned_data.get('country')
         if not country:
-            return "Not Specified"  # ✅ Ensure it always saves something
+            return "Not Specified"  
         return country
     
 class ContactForm(forms.Form):
@@ -169,4 +165,4 @@ class ContactForm(forms.Form):
     last_name = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())  # Add reCAPTCHA field
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())  

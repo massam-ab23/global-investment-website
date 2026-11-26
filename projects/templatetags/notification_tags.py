@@ -1,7 +1,7 @@
-from django import template  # Import the template module
-from projects.models import Notification  # Import your Notification model
+from django import template  
+from projects.models import Notification  
 
-register = template.Library()  # Register the custom template tags or filters
+register = template.Library()  
 
 @register.filter
 def unread_notifications(user):

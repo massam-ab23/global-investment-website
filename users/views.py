@@ -10,7 +10,7 @@ from django.utils.translation import get_language
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render
-from .models import CustomUser  # or whatever your user model is
+from .models import CustomUser  
 
 def register(request):
     """Handles user registration"""
@@ -18,7 +18,7 @@ def register(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redirect to the login page after registration
+            return redirect('login')  
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
@@ -39,12 +39,11 @@ def custom_login(request):
                 except User.DoesNotExist:
                     user = None
             else:
-                # Allow username-based login for admins
                 user = authenticate(request, username=username_or_email, password=password)
 
             if user is not None:
                 login(request, user)
-                return redirect('landing')  # Redirect to homepage or dashboard
+                return redirect('landing')  
             else:
                 form.add_error(None, _("Invalid login credentials."))
     else:
@@ -60,7 +59,7 @@ def create_project(request):
 @login_required
 def profile(request):
     """Displays user profile along with their recent activities"""
-    activities = Activity.objects.filter(user=request.user).order_by('-timestamp')[:10]  # Latest 10 actions
+    activities = Activity.objects.filter(user=request.user).order_by('-timestamp')[:10]  
     return render(request, 'users/profile.html', {
         'user': request.user,
         'activities': activities,

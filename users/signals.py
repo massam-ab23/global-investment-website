@@ -5,9 +5,9 @@ from .models import UserProfile
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-    """ ✅ Automatically create a UserProfile when a new user is created """
+    """ Automatically create a UserProfile when a new user is created """
     if created:
-        UserProfile.objects.create(user=instance, country="Not Specified")  # Default country
+        UserProfile.objects.create(user=instance, country="Not Specified")  
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
