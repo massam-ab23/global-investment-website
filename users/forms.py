@@ -48,14 +48,14 @@ class CustomLoginForm(AuthenticationForm):
         username_or_email = self.cleaned_data.get('username')
 
         # Check if the user logging in is an admin
-        if username_or_email == "your_admin_username":  # Replace with actual admin username
-            return username_or_email  # Allow username login for admin
+        if username_or_email == "your_admin_username":  
+            return username_or_email  
 
         # Check if it's an email
         if "@" in username_or_email:
             try:
                 user = User.objects.get(email=username_or_email)
-                return user.username  # Convert email to username for authentication
+                return user.username  
             except User.DoesNotExist:
                 raise ValidationError("No account found with this email.")
         
