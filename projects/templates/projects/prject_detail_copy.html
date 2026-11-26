@@ -34,10 +34,9 @@
         <a href="{% url 'apply_to_invest' project.id %}" class="btn btn-primary">{% trans "Apply to Invest" %}</a>
     </div>
 
-    <!-- ✅ Show this section only to logged-in users who own the project -->
+    <!-- Show this section only to logged-in users who own the project -->
     {% if user.is_authenticated and project.owner == user %}
     
-        <!-- Collaborators Section -->
         <div class="mt-5">
             <h5>{% trans "Collaborators:" %}</h5>
             {% if collaborators %}
@@ -56,7 +55,7 @@
             {% endif %}
         </div>
 
-        <!-- ✅ Invite Collaborators -->
+        <!-- Invite Collaborators -->
         <div class="mt-4">
             <h5>{% trans "Invite Collaborator" %}</h5>
             <form method="POST" class="mb-4">
@@ -66,18 +65,17 @@
             </form>
         </div>
 
-        <!-- ✅ Back and Owner-Specific Actions -->
         <div class="mt-4">
             <a href="{% url 'my_projects' %}" class="btn btn-secondary me-2">{% trans "Back to My Projects" %}</a>
             <a href="{% url 'edit_project' project.id %}" class="btn btn-primary me-2">{% trans "Edit Project" %}</a>
             <a href="{% url 'delete_project' project.id %}" class="btn btn-danger">{% trans "Delete Project" %}</a>
         </div>
 
-    {% endif %}  <!-- ✅ Closes if user is authenticated and project owner -->
+    {% endif %}  
 
 </div>
 
-<!-- ✅ JavaScript for removing collaborators (Only for logged-in owners) -->
+<!-- JavaScript for removing collaborators (Only for logged-in owners) -->
 {% if user.is_authenticated and project.owner == user %}
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -120,6 +118,6 @@
         });
     });
 </script>
-{% endif %}  <!-- ✅ Closes the script block for authenticated users -->
+{% endif %}  
 
 {% endblock %}
