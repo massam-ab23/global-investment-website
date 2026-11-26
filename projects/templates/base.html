@@ -22,14 +22,10 @@
     <meta name="twitter:description" content="Discover the latest investment opportunities in Eritrea.">
     <meta name="twitter:image" content="{% static 'images/eritrea-flag.png' %}">
 
-    <!--  CSS & Bootstrap -->
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Your custom CSS MUST be last -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
     <link rel="icon" href="{% static 'favicon.ico' %}">
@@ -140,48 +136,48 @@
                             <div class="row">
 
                                 <div class="col-md-3">
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Agriculture' %}">🌾 {% trans "Agriculture" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Energy' %}">⚡ {% trans "Energy" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Mining' %}">⛏️ {% trans "Mining" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Education' %}">📚 {% trans "Education" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Tourism' %}">🏝️ {% trans "Tourism" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Irrigation' %}">💧 {% trans "Irrigation" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Technology' %}">💻 {% trans "Technology" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Healthcare' %}">🏥 {% trans "Healthcare" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Agriculture' %}">{% trans "Agriculture" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Energy' %}"> {% trans "Energy" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Mining' %}"> {% trans "Mining" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Education' %}"> {% trans "Education" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Tourism' %}"> {% trans "Tourism" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Irrigation' %}"> {% trans "Irrigation" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Technology' %}"> {% trans "Technology" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Healthcare' %}"> {% trans "Healthcare" %}</a>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Finance' %}">💰 {% trans "Finance" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Robotics' %}">🤖 {% trans "Robotics" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Artificial-Intelligence' %}">🧠 {% trans "AI" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Manufacturing' %}">🏭 {% trans "Manufacturing" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Retail' %}">🛍️ {% trans "Retail" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Real-Estate' %}">🏠 {% trans "Real Estate" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Transportation' %}">🚚 {% trans "Transportation" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Logistics' %}">📦 {% trans "Logistics" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Finance' %}"> {% trans "Finance" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Robotics' %}"> {% trans "Robotics" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Artificial-Intelligence' %}"> {% trans "AI" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Manufacturing' %}"> {% trans "Manufacturing" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Retail' %}"> {% trans "Retail" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Real-Estate' %}"> {% trans "Real Estate" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Transportation' %}"> {% trans "Transportation" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Logistics' %}"> {% trans "Logistics" %}</a>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Media' %}">📺 {% trans "Media" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Entertainment' %}">🎭 {% trans "Entertainment" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Sports' %}">⚽ {% trans "Sports" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Aerospace' %}">✈️ {% trans "Aerospace" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Defense' %}">🛡️ {% trans "Defense" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Environment' %}">🌍 {% trans "Environment" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Water-Resources' %}">🚰 {% trans "Water Resources" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Food-Processing' %}">🍽️ {% trans "Food Processing" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Media' %}"> {% trans "Media" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Entertainment' %}"> {% trans "Entertainment" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Sports' %}"> {% trans "Sports" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Aerospace' %}"> {% trans "Aerospace" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Defense' %}"> {% trans "Defense" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Environment' %}"> {% trans "Environment" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Water-Resources' %}"> {% trans "Water Resources" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Food-Processing' %}"> {% trans "Food Processing" %}</a>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Pharmaceuticals' %}">💊 {% trans "Pharmaceuticals" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Biotechnology' %}">🧪 {% trans "Biotechnology" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Telecommunications' %}">📡 {% trans "Telecommunications" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'E-Commerce' %}">🛒 {% trans "E-Commerce" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Consulting' %}">📊 {% trans "Consulting" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Fashion' %}">👗 {% trans "Fashion" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Automotive' %}">🚗 {% trans "Automotive" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Non-Profit' %}">🏛️ {% trans "Non-Profit" %}</a>
-                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Public-Administration' %}">🏛 {% trans "Public Admin" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Pharmaceuticals' %}"> {% trans "Pharmaceuticals" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Biotechnology' %}"> {% trans "Biotechnology" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Telecommunications' %}"> {% trans "Telecommunications" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'E-Commerce' %}"> {% trans "E-Commerce" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Consulting' %}"> {% trans "Consulting" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Fashion' %}"> {% trans "Fashion" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Automotive' %}"> {% trans "Automotive" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Non-Profit' %}"> {% trans "Non-Profit" %}</a>
+                                    <a class="dropdown-item" href="{% url 'sector_detail' 'Public-Administration' %}"> {% trans "Public Admin" %}</a>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +299,7 @@
             if (langDropdown) {
                 console.log(" Language dropdown found in DOM.");
             } else {
-                console.log("❌ Language dropdown NOT found! Check your HTML.");
+                console.log(" Language dropdown NOT found! Check your HTML.");
             }
     
             //  Debugging - Check if menu dropdown exists
@@ -311,7 +307,7 @@
             if (menuDropdown) {
                 console.log(" Menu dropdown found in DOM.");
             } else {
-                console.log("❌ Menu dropdown NOT found! Check your HTML.");
+                console.log(" Menu dropdown NOT found! Check your HTML.");
             }
     
             //  Initialize notifications dropdown
@@ -449,7 +445,7 @@
                     }, 300); // Delay to ensure sidebar closes before opening Multisector
                 });
             } else {
-                console.log("❌ Multisector elements NOT found! Check your IDs.");
+                console.log(" Multisector elements NOT found! Check your IDs.");
             }
         });
     </script>    
