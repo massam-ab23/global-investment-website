@@ -1,4 +1,4 @@
-/*  Top Navbar (Like "EDB Singapore") */
+
 .top-navbar {
     background: #f8f9fa;
     padding: 10px 15px;
@@ -22,25 +22,25 @@
 
 /*  Adjust Logo Image Size */
 .navbar-brand img {
-    height: 50px; /* Change this to increase or decrease */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; 
+    width: auto; 
 }
 
 /*  Adjust Logo Text Size */
 /*  Adjust Logo Text Formatting */
 .navbar-brand span {
-    font-size: 22px; /* Adjust text size */
+    font-size: 22px; 
     font-weight: bold;
     text-transform: uppercase;
     display: block;
-    line-height: 1.2; /* Adjust spacing between lines */
-    text-align: left; /* Aligns text to the left of the logo */
+    line-height: 1.2; 
+    text-align: left; 
 }
 
 /*  Indent "PLATFORM" */
 .navbar-brand span br + span {
     display: block;
-    text-indent: 30px; /* Moves "PLATFORM" to the right */
+    text-indent: 30px; 
 }
 
 
@@ -93,8 +93,8 @@ footer .contact-us-link:hover {
 }
 
 .top-navbar .d-flex {
-    justify-content: flex-end; /* Keeps it right-aligned */
-    padding-right: 50px; /* Adjust this value to move left */
+    justify-content: flex-end; 
+    padding-right: 50px; 
 }
 
 /* Social Icons */
@@ -125,7 +125,7 @@ footer .contact-us-link:hover {
 
 /* Ensure all social media icons are white */
 .social-link i {
-    color: white !important; /* Make all icons white */
+    color: white !important; 
     font-size: 24px;
     text-decoration: none;
 }
@@ -133,28 +133,14 @@ footer .contact-us-link:hover {
 /* Specifically target the Twitter (X) icon */
 .social-link i.fa-twitter,
 .social-link i.fa-x-twitter {
-    color: white !important; /* Ensure Twitter/X is white */
+    color: white !important; 
 }
 
-/*  Adjust Separator Line */
-/*.separator-line {
-    border: 0;
-    height: 0.5px; /* Make it thinner */
-    
-    /*  Gradient: White to Light Blue to Blue */
-    /*background: linear-gradient(to right, 
-       /* rgba(255, 255, 255, 0.7),  /* White */
-       /* rgba(173, 216, 230, 0.9),  /* Light Blue */
-       /* rgba(0, 123, 255, 0.9)     /* Blue */
-    /*); 
-    
-    margin: 0;
-}
 /*  Adjust Separator Line - Fully Blue */
 .separator-line {
     border: 0;
     height: 0.5px;
-    background-color: transparent; /* Makes it fully invisible */
+    background-color: transparent; 
     margin: 0;
 }
 
@@ -215,11 +201,11 @@ footer .contact-us-link:hover {
 /*  Fix Multisector Dropdown Alignment */
 .navbar .dropdown-menu {
     position: absolute !important;
-    top: 100% !important; /*  Places the dropdown just below "Multisector" */
-    left: 0; /*  Ensures it starts right under "Multisector" */
-    width: 800px !important; /*  Wide enough to fit all sectors */
+    top: 100% !important; 
+    left: 0; 
+    width: 800px !important; 
     z-index: 1050 !important;
-    display: none; /*  Initially hidden */
+    display: none; 
 }
 
 /*  Fix dropdown to always open below */
@@ -231,8 +217,8 @@ footer .contact-us-link:hover {
 
 /*  Ensure Multisector dropdown aligns properly */
 #multisectorDropdown + .dropdown-menu {
-    left: -250px !important; /*  Adjusts positioning */
-    min-width: 850px !important; /*  Ensures all sectors fit */
+    left: -250px !important; 
+    min-width: 850px !important; 
     max-width: 900px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -240,12 +226,9 @@ footer .contact-us-link:hover {
 
 /*  Make the arrow smaller, thinner, and modern-looking: (Multisector & Language Dropdown Icons Misaligned) */
 .custom-dropdown-toggle .custom-arrow {
-    font-size: 12px; /* Adjust size or Ensure the icon is the right size */
-    margin-left: 0px; /* Spacing or Give space between text and icon*/
-    /*transition: transform 0.2s ease-in-out; */
-    /*transform: translateY(2px); /*  Move it slightly down */
-    /*font-weight: bold; /* Make it more visible */
-    letter-spacing: 0px; /* Spread the "v" wider */
+    font-size: 12px; 
+    margin-left: 0px; 
+    letter-spacing: 0px; 
 }
 /*  Rotate arrow when dropdown is open */
 .nav-item.dropdown:hover .custom-arrow {
@@ -295,21 +278,21 @@ footer .contact-us-link:hover {
 /*  Fix Language Dropdown Alignment */
 #languageDropdown + .dropdown-menu {
     position: absolute !important;
-    top: 100% !important; /*  Places it directly below "English" */
-    left: 0 !important; /*  Aligns directly under "English" */
-    min-width: 180px !important; /*  Adjust width if needed */
+    top: 100% !important; 
+    left: 0 !important; 
+    min-width: 180px !important; 
     max-width: 200px;
     text-align: left;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /*  Adds a subtle shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 /*  Ensure the list items fit properly */
 #languageDropdown + .dropdown-menu a {
     display: block;
     padding: 8px 12px;
-    font-size: 14px; /*  Ensures compact text */
+    font-size: 14px; 
     color: #333;
     text-decoration: none;
 }
@@ -337,7 +320,7 @@ footer .contact-us-link:hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 450px; /*  Wider panel */
+    width: 450px; 
     height: 100vh;
     background: white;
     z-index: 9999;
@@ -345,7 +328,7 @@ footer .contact-us-link:hover {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
-    padding: 30px 20px; /*  More padding for a clean look */
+    padding: 30px 20px; 
     border-radius: 0 0 0 10px;
 }
 
@@ -373,8 +356,8 @@ footer .contact-us-link:hover {
     border-radius: 30px;
     padding: 10px;
     margin-top: 20px;
-    justify-content: space-between; /*  Proper spacing */
-    background-color: #f8f8f8; /*  Light background for better visibility */
+    justify-content: space-between; 
+    background-color: #f8f8f8; 
 }
 
 .search-box input {
@@ -389,14 +372,14 @@ footer .contact-us-link:hover {
 .search-box i {
     font-size: 18px;
     color: gray;
-    padding-right: 12px; /*  Add spacing between icon and input */
+    padding-right: 12px; 
 }
 
 /*  Fix Search Title Size */
 #searchOverlay h2 {
     font-size: 22px;
     font-weight: bold;
-    text-align: left; /*  Align to the left */
+    text-align: left; 
     margin-bottom: 15px;
 }
 
@@ -436,30 +419,30 @@ footer .contact-us-link:hover {
     display: flex;
     align-items: center;
     font-size: 16px;
-    font-weight: normal; /*  Make it normal */
+    font-weight: normal; 
     padding: 5px 10px;
     cursor: pointer;
 }
 
 #searchButton i {
     font-size: 16px;
-    color: white; /*  Keeps the icon white */
-    font-style: normal; /*  Ensures correct icon rendering */
+    color: white; 
+    font-style: normal; 
 }
 
 
 /*  Ensure NewInfo Dropdown Aligns Directly Below */
 #newInfoDropdown {
     position: absolute !important;
-    top: 100%; /*  Places it directly below NewInfo */
-    left: 0 !important; /*  Aligns directly under NewInfo */
-    width: 220px !important; /*  Fix width */
-    padding: 5px 10px; /*  Proper padding */
+    top: 100%; 
+    left: 0 !important; 
+    width: 220px !important; 
+    padding: 5px 10px; 
     background: white;
     border-radius: 5px;
     text-align: left;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /*  Initially hidden */
+    display: none; 
     overflow: hidden;
 }
 
@@ -477,7 +460,7 @@ footer .contact-us-link:hover {
 }
 
 #newInfoButton + #newInfoDropdown {
-    left: 0 !important; /*  Ensures it is straight under */
+    left: 0 !important; 
     right: auto !important;
 }
 
@@ -495,25 +478,25 @@ footer .contact-us-link:hover {
 
 #menuDropdown + .dropdown-menu {
     position: absolute !important;
-    top: 100%; /* Places it directly below the Menu button */
-    left: 0; /* Aligns directly under Menu */
-    min-width: 180px !important; /* Fix width */
-    max-width: 220px !important; /* Ensures width consistency */
-    padding: 5px 10px; /* Proper padding */
+    top: 100%; 
+    left: 0; 
+    min-width: 180px !important; 
+    max-width: 220px !important; 
+    padding: 5px 10px; 
     background: white;
     border-radius: 5px;
     text-align: left;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    display: none; /* Initially hidden */
-    overflow: hidden; /* Prevents unnecessary stretching */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    display: none; 
+    overflow: hidden; 
 }
 
 /*  Ensure Compact Dropdown */
 #menuDropdown + .dropdown-menu.show {
     display: block !important;
-    max-width: 220px !important; /* Limits width */
+    max-width: 220px !important; 
     min-width: 180px !important;
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap; 
 }
 
 /*  Adjust Logout Button */
@@ -547,7 +530,7 @@ footer .contact-us-link:hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 350px; /* Adjust width if needed */
+    width: 350px; 
     height: 100vh;
     background: white;
     z-index: 9999;
@@ -630,35 +613,35 @@ footer .contact-us-link:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px; /* Space between text and image */
-    flex-direction: row; /* Ensures text is on the left, image on the right */
-    margin-bottom: 50px; /* Adds spacing between sections */
+    gap: 50px; 
+    flex-direction: row; 
+    margin-bottom: 50px; 
 }
 
 /* Ensure text is aligned properly */
 .history-text {
-    flex: 1; /* Allow text to take available space */
+    flex: 1; 
     text-align: left;
 }
 
 /* Ensure images are aligned properly */
 .history-img-container {
-    flex: 0 0 370px; /* Fixed width for images */
+    flex: 0 0 370px; 
     display: flex;
     justify-content: flex-end;
 }
 
 /* Normal (Desktop) Image Styling */
 .history-img {
-    max-width: 370px !important; /* Force smaller size */
+    max-width: 370px !important; 
     width: 100% !important;
-    height: auto !important; /* Maintain aspect ratio */
+    height: auto !important; 
 }
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
     .history-img {
-        max-width: 150px !important; /* Make images even smaller on mobile */
+        max-width: 150px !important; 
     }
 }
 
@@ -698,7 +681,7 @@ footer .contact-us-link:hover {
 /*  Title (Fixed at Center) */
 .video-title {
     position: absolute;
-    top: 45%; /* Centers it correctly */
+    top: 45%; 
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -728,14 +711,14 @@ footer .contact-us-link:hover {
 
 /*  Move the Subtitle Down (Perfectly Spaced) */
 .video-overlay .subtext {
-    margin-top: 73px; /* 🔹 More space from the search button */
-    font-size: 1.2rem; /* 🔹 Slightly bigger for better readability */
+    margin-top: 73px; 
+    font-size: 1.2rem; 
     color: white;
     text-align: center;
     font-weight: 500;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* 🔹 Stronger shadow for visibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); 
     position: absolute;
-    bottom: -30px; /* 🔹 Moves it slightly higher */
+    bottom: -30px; 
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -758,7 +741,7 @@ footer .contact-us-link:hover {
 
     .video-title {
         font-size: 1.8rem;
-        top: 45%; /* Keeps it centered */
+        top: 45%; 
     }
 
     .video-overlay {
@@ -771,8 +754,8 @@ footer .contact-us-link:hover {
     }
 
     .video-overlay .subtext {
-        font-size: 1.1rem; /* 🔹 Slightly smaller for mobile */
-        bottom: -20px; /* 🔹 Slightly higher for better visibility */
+        font-size: 1.1rem; 
+        bottom: -20px; 
     }
 }
 
