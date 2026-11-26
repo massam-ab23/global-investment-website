@@ -6,7 +6,7 @@ A custom full-stack web platform developed for an Eritrean investment initiative
 
 The Global Investment Website was built to support an Eritrean investment initiative through a web-based platform. It combines backend services, frontend interfaces and persistent data storage to provide an online environment for investment-related projects and user interaction.
 
-The project was originally deployed at [eritreaninvestment.com](https://eritreaninvestment.com). The website is not currently maintained as a live service.
+The project was originally deployed at [eritreaninvestment.com](https://eritreaninvestment.com/). The website is currently offline because the domain and hosting services could not be renewed due to financial constraints. The live service is therefore temporarily unavailable, but the source code is preserved here for reference and portfolio purposes.
 
 ## Features
 
