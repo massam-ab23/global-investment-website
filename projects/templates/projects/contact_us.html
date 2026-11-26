@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
-{% load i18n %}  <!-- Ensure this line is present -->
+{% load i18n %} 
 
 {% block content %}
 <div class="container mt-5">
     <h2>{% trans "Contact Us" %}</h2>
 
-    <!-- Display messages -->
     {% if messages %}
         {% for message in messages %}
             <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}">
@@ -15,11 +14,9 @@
         {% endfor %}
     {% endif %}
 
-    <!-- Render the form with reCAPTCHA -->
     <form method="POST">
         {% csrf_token %}
 
-        <!-- Option 1: If using Django Forms -->
         {% if form %}
             {{ form.as_p }}
         {% else %}
