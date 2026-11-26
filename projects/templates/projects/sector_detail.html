@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load i18n %}  <!-- ✅ Load translation library -->
+{% load i18n %}  
 
 {% block content %}
 <div class="sector-header" style="background: url('{{ sector_image_url }}') no-repeat center center/cover; 
@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <!-- ✅ Corrected Image Path -->
+            <!--  Corrected Image Path -->
             <img src="{{ sector_image_url }}" class="img-fluid rounded shadow" alt="{% trans sector_name %}">
         </div>
         <div class="col-md-8">
